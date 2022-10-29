@@ -1,0 +1,85 @@
+/*
+@TargetNode='HelloWorld_WebServer_Parameter_Module'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 11:00:42
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_FileDirectoryConfiguration as $MSFT_FileDirectoryConfiguration1ref
+{
+DestinationPath = "c:\\temp\\HelloWorld.txt";
+ ResourceID = "[File]TestFile";
+ Contents = "Hello World!";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\HelloWorld_WebServer_Parameter_Module.ps1::14::9::File";
+ Ensure = "Present";
+ ModuleName = "PSDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]WebServer";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\HelloWorld_WebServer_Parameter_Module.ps1::21::9::WindowsFeature";
+ Name = "Web-Server";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource2ref
+{
+ResourceID = "[WindowsFeature]ManagementTools";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\HelloWorld_WebServer_Parameter_Module.ps1::27::9::WindowsFeature";
+ Name = "Web-Mgmt-Tools";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource3ref
+{
+ResourceID = "[WindowsFeature]DefaultDoc";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\HelloWorld_WebServer_Parameter_Module.ps1::33::9::WindowsFeature";
+ Name = "Web-Default-Doc";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+};
+instance of DSC_WebSite as $DSC_WebSite1ref
+{
+ModuleVersion = "4.0.0";
+ ResourceID = "[WebSite]DefaultSite";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\HelloWorld_WebServer_Parameter_Module.ps1::39::9::Website";
+ PhysicalPath = "C:\\https";
+ Name = "Default Web Site";
+ Ensure = "Present";
+ State = "Stopped";
+ ModuleName = "WebAdministrationDsc";
+
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 11:00:42";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="HelloWorld_WebServer_Parameter_Module";
+
+                    };

@@ -1,0 +1,267 @@
+/*
+@TargetNode='XOAP_Citrix_StoreFront'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 10:55:30
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]Web-Server";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::9::9::WindowsFeature";
+ Name = "Web-Server";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource2ref
+{
+ResourceID = "[WindowsFeature]Web-WebServer";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::15::9::WindowsFeature";
+ Name = "Web-WebServer";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource3ref
+{
+ResourceID = "[WindowsFeature]Web-Default-Doc";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::21::9::WindowsFeature";
+ Name = "Web-Default-Doc";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource4ref
+{
+ResourceID = "[WindowsFeature]Web-Http-Errors";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::27::9::WindowsFeature";
+ Name = "Web-Http-Errors";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource5ref
+{
+ResourceID = "[WindowsFeature]Web-Static-Content";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::33::9::WindowsFeature";
+ Name = "Web-Static-Content";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource6ref
+{
+ResourceID = "[WindowsFeature]Web-Http-Redirect";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::39::9::WindowsFeature";
+ Name = "Web-Http-Redirect";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource7ref
+{
+ResourceID = "[WindowsFeature]Web-Health";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::45::9::WindowsFeature";
+ Name = "Web-Health";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource8ref
+{
+ResourceID = "[WindowsFeature]Web-Http-Logging";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::51::9::WindowsFeature";
+ Name = "Web-Http-Logging";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource9ref
+{
+ResourceID = "[WindowsFeature]Web-Security";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::57::9::WindowsFeature";
+ Name = "Web-Security";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource10ref
+{
+ResourceID = "[WindowsFeature]Web-Filtering";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::63::9::WindowsFeature";
+ Name = "Web-Filtering";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource11ref
+{
+ResourceID = "[WindowsFeature]Web-Basic-Auth";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::69::9::WindowsFeature";
+ Name = "Web-Basic-Auth";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource12ref
+{
+ResourceID = "[WindowsFeature]Web-Windows-Auth";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::75::9::WindowsFeature";
+ Name = "Web-Windows-Auth";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource13ref
+{
+ResourceID = "[WindowsFeature]Web-App-Dev";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::81::9::WindowsFeature";
+ Name = "Web-App-Dev";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource14ref
+{
+ResourceID = "[WindowsFeature]Web-Net-Ext45";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::87::9::WindowsFeature";
+ Name = "Web-Net-Ext45";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource15ref
+{
+ResourceID = "[WindowsFeature]Web-AppInit";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::93::9::WindowsFeature";
+ Name = "Web-AppInit";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource16ref
+{
+ResourceID = "[WindowsFeature]Web-Asp-Net45";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::99::9::WindowsFeature";
+ Name = "Web-Asp-Net45";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource17ref
+{
+ResourceID = "[WindowsFeature]Web-ISAPI-Ext";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::105::9::WindowsFeature";
+ Name = "Web-ISAPI-Ext";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource18ref
+{
+ResourceID = "[WindowsFeature]Web-ISAPI-Filter";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::111::9::WindowsFeature";
+ Name = "Web-ISAPI-Filter";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource19ref
+{
+ResourceID = "[WindowsFeature]Web-Mgmt-Tools";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::117::9::WindowsFeature";
+ Name = "Web-Mgmt-Tools";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource20ref
+{
+ResourceID = "[WindowsFeature]Web-Mgmt-Console";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::123::9::WindowsFeature";
+ Name = "Web-Mgmt-Console";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource21ref
+{
+ResourceID = "[WindowsFeature]Web-Scripting-Tools";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::129::9::WindowsFeature";
+ Name = "Web-Scripting-Tools";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource22ref
+{
+ResourceID = "[WindowsFeature]NET-Framework-45-ASPNET";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_StoreFront.ps1::135::9::WindowsFeature";
+ Name = "NET-Framework-45-ASPNET";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_StoreFront";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 10:55:30";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="XOAP_Citrix_StoreFront";
+
+                    };
