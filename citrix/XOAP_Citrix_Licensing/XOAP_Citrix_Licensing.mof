@@ -1,0 +1,47 @@
+/*
+@TargetNode='XOAP_Citrix_Licensing'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 11:10:21
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]RDS-Licensing";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_Licensing.ps1::10::9::WindowsFeature";
+ Name = "RDS-Licensing";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Licensing";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource2ref
+{
+ResourceID = "[WindowsFeature]RDS-Licensing-UI";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\XOAP_Citrix_Licensing.ps1::16::9::WindowsFeature";
+ Name = "RDS-Licensing-UI";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Licensing";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 11:10:21";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="XOAP_Citrix_Licensing";
+
+                    };

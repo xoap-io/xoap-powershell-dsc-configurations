@@ -1,0 +1,67 @@
+/*
+@TargetNode='Configure_IIS_Server'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 10:59:16
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]WebServer";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\Configure_IIS_Server.ps1::9::9::WindowsFeature";
+ Name = "Web-Server";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "Configure_IIS_Server";
+};
+instance of DSC_WebSiteDefaults as $DSC_WebSiteDefaults1ref
+{
+ModuleVersion = "4.0.0";
+ AllowSubDirConfig = "true";
+ ResourceID = "[WebSiteDefaults]SiteDefaults";
+ DefaultApplicationPool = "DefaultAppPool";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\Configure_IIS_Server.ps1::15::9::WebSiteDefaults";
+ LogFormat = "IIS";
+ LogDirectory = "C:\\inetpub\\logs\\LogFiles";
+ IsSingleInstance = "Yes";
+ ModuleName = "WebAdministrationDsc";
+ TraceLogDirectory = "C:\\inetpub\\logs\\FailedReqLogFiles";
+
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "Configure_IIS_Server";
+};
+instance of DSC_WebAppPoolDefaults as $DSC_WebAppPoolDefaults1ref
+{
+ModuleVersion = "4.0.0";
+ ResourceID = "[WebAppPoolDefaults]PoolDefaults";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\Configure_IIS_Server.ps1::26::9::WebAppPoolDefaults";
+ IdentityType = "ApplicationPoolIdentity";
+ ManagedRuntimeVersion = "v4.0";
+ IsSingleInstance = "Yes";
+ ModuleName = "WebAdministrationDsc";
+
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "Configure_IIS_Server";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 10:59:16";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="Configure_IIS_Server";
+
+                    };

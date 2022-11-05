@@ -1,0 +1,172 @@
+/*
+@TargetNode='WSUS_Server'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 11:07:13
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]UpdateServices";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::9::9::WindowsFeature";
+ Name = "UpdateServices";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_RoleResource as $MSFT_RoleResource2ref
+{
+ResourceID = "[WindowsFeature]UpdateServicesRSAT";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::15::9::WindowsFeature";
+ IncludeAllSubFeature = True;
+ Name = "UpdateServices-RSAT";
+ Ensure = "Present";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesServer as $MSFT_UpdateServicesServer1ref
+{
+ModuleVersion = "1.2.1";
+ SynchronizeAutomatically = True;
+ ResourceID = "[UpdateServicesServer]UpdateServices";
+ Products = {
+    "Windows Server 2019"
+};
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::22::9::UpdateServicesServer";
+ SynchronizeAutomaticallyTimeOfDay = "15:30:00";
+ Languages = {
+    "en"
+};
+ Ensure = "Present";
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "*"
+};
+
+DependsOn = {
+    "[WindowsFeature]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule1ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesApprovalRule]DefinitionUpdates";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::39::9::UpdateServicesApprovalRule";
+ Enabled = True;
+ Name = "Definition Updates";
+ RunRuleNow = True;
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "e0789628-ce08-4437-be74-2495b842f43b"
+};
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule2ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesApprovalRule]CriticalUpdates";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::48::9::UpdateServicesApprovalRule";
+ Enabled = True;
+ Name = "Critical Updates";
+ RunRuleNow = True;
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "e6cf1350-c01b-414d-a61f-263d14d133b4"
+};
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule3ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesApprovalRule]SecurityUpdates";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::57::9::UpdateServicesApprovalRule";
+ Enabled = True;
+ Name = "Security Updates";
+ RunRuleNow = True;
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "0fa1201d-4330-4fa8-8ae9-b877473b6441"
+};
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule4ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesApprovalRule]ServicePacks";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::66::9::UpdateServicesApprovalRule";
+ Enabled = True;
+ Name = "Service Packs";
+ RunRuleNow = True;
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "68c5b0a3-d1a6-4553-ae49-01d3a7827828"
+};
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule5ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesApprovalRule]UpdateRollUps";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::75::9::UpdateServicesApprovalRule";
+ Enabled = True;
+ Name = "Update RollUps";
+ RunRuleNow = True;
+ ModuleName = "UpdateServicesDsc";
+ Classifications = {
+    "28bc880e-0592-4cbf-8f95-c79b17911d5f"
+};
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of MSFT_UpdateServicesCleanup as $MSFT_UpdateServicesCleanup1ref
+{
+ModuleVersion = "1.2.1";
+ ResourceID = "[UpdateServicesCleanup]UpdateServices";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\WSUS_Server.ps1::84::9::UpdateServicesCleanup";
+ CleanupUnneededContentFiles = True;
+ DeclineSupersededUpdates = True;
+ CleanupObsoleteUpdates = True;
+ Ensure = "Present";
+ ModuleName = "UpdateServicesDsc";
+ DeclineExpiredUpdates = True;
+
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 11:07:13";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="WSUS_Server";
+
+                    };

@@ -1,0 +1,37 @@
+/*
+@TargetNode='Windows_Optional_Feature'
+@GeneratedBy=s.sokolic
+@GenerationDate=10/29/2022 11:07:08
+@GenerationHost=DESKTOP-RQ1FOQF
+*/
+
+instance of MSFT_WindowsOptionalFeature as $MSFT_WindowsOptionalFeature1ref
+{
+ResourceID = "[WindowsOptionalFeature]EnableOptionalFeature";
+ SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\server\\Windows_Optional_Feature.ps1::8::9::WindowsOptionalFeature";
+ Name = "TelnetClient";
+ Ensure = "Enable";
+ ModuleName = "PsDesiredStateConfiguration";
+ LogPath = "C:\\WindowsOptionalFeatures";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "Windows_Optional_Feature";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+
+                        MinimumCompatibleVersion = "1.0.0";
+
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+
+                        Author="s.sokolic";
+
+                        GenerationDate="10/29/2022 11:07:08";
+
+                        GenerationHost="DESKTOP-RQ1FOQF";
+
+                        Name="Windows_Optional_Feature";
+
+                    };

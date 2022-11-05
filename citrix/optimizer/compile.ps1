@@ -1,0 +1,16 @@
+.\XOAP_W10_1607_Citrix_Optimizer.ps1
+.\XOAP_W10_1703_Citrix_Optimizer.ps1
+.\XOAP_W10_1709_Citrix_Optimizer.ps1
+.\XOAP_W10_1803_Citrix_Optimizer.ps1
+.\XOAP_W10_1809_Citrix_Optimizer.ps1
+.\XOAP_W10_1903_Citrix_Optimizer.ps1
+.\XOAP_W10_1909_Citrix_Optimizer.ps1
+.\XOAP_W10_2004_Citrix_Optimizer.ps1
+.\XOAP_W10_20H2_Citrix_Optimizer.ps1
+.\XOAP_W10_21H1_Citrix_Optimizer.ps1
+.\XOAP_W10_21H2_Citrix_Optimizer.ps1
+.\XOAP_W11_2009_Citrix_Optimizer.ps1
+.\XOAP_W2k12R2_Citrix_Optimizer.ps1
+.\XOAP_W2K16_1607_Citrix_Optimizer.ps1
+.\XOAP_W2K19_1809_Citrix_Optimizer.ps1
+.\XOAP_W2K22_2009_Citrix_Optimizer.ps1
