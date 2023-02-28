@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]WebServer";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "Configure_IIS_Server";
+ModuleVersion = "1.0";
+ ConfigurationName = "Configure_IIS_Server";
 };
 instance of DSC_WebSiteDefaults as $DSC_WebSiteDefaults1ref
 {
@@ -29,9 +29,9 @@ ModuleVersion = "4.0.0";
  ModuleName = "WebAdministrationDsc";
  TraceLogDirectory = "C:\\inetpub\\logs\\FailedReqLogFiles";
 
-DependsOn = {
-    "[WindowsFeature]WebServer"};
- ConfigurationName = "Configure_IIS_Server";
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "Configure_IIS_Server";
 };
 instance of DSC_WebAppPoolDefaults as $DSC_WebAppPoolDefaults1ref
 {
@@ -43,25 +43,25 @@ ModuleVersion = "4.0.0";
  IsSingleInstance = "Yes";
  ModuleName = "WebAdministrationDsc";
 
-DependsOn = {
-    "[WindowsFeature]WebServer"};
- ConfigurationName = "Configure_IIS_Server";
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "Configure_IIS_Server";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 10:59:16";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="Configure_IIS_Server";
-
+
                     };

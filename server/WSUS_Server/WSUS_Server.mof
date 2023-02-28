@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]UpdateServices";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "WSUS_Server";
+ModuleVersion = "1.0";
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -25,8 +25,8 @@ ResourceID = "[WindowsFeature]UpdateServicesRSAT";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "WSUS_Server";
+ModuleVersion = "1.0";
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesServer as $MSFT_UpdateServicesServer1ref
 {
@@ -47,9 +47,9 @@ ModuleVersion = "1.2.1";
     "*"
 };
 
-DependsOn = {
-    "[WindowsFeature]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[WindowsFeature]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule1ref
 {
@@ -64,9 +64,9 @@ ModuleVersion = "1.2.1";
     "e0789628-ce08-4437-be74-2495b842f43b"
 };
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule2ref
 {
@@ -81,9 +81,9 @@ ModuleVersion = "1.2.1";
     "e6cf1350-c01b-414d-a61f-263d14d133b4"
 };
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule3ref
 {
@@ -98,9 +98,9 @@ ModuleVersion = "1.2.1";
     "0fa1201d-4330-4fa8-8ae9-b877473b6441"
 };
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule4ref
 {
@@ -115,9 +115,9 @@ ModuleVersion = "1.2.1";
     "68c5b0a3-d1a6-4553-ae49-01d3a7827828"
 };
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesApprovalRule as $MSFT_UpdateServicesApprovalRule5ref
 {
@@ -132,9 +132,9 @@ ModuleVersion = "1.2.1";
     "28bc880e-0592-4cbf-8f95-c79b17911d5f"
 };
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of MSFT_UpdateServicesCleanup as $MSFT_UpdateServicesCleanup1ref
 {
@@ -148,25 +148,25 @@ ModuleVersion = "1.2.1";
  ModuleName = "UpdateServicesDsc";
  DeclineExpiredUpdates = True;
 
-DependsOn = {
-    "[UpdateServicesServer]UpdateServices"};
- ConfigurationName = "WSUS_Server";
+DependsOn = {
+    "[UpdateServicesServer]UpdateServices"};
+ ConfigurationName = "WSUS_Server";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:07:13";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="WSUS_Server";
-
+
                     };

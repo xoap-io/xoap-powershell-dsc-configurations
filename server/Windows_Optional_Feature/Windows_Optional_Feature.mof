@@ -14,24 +14,24 @@ ResourceID = "[WindowsOptionalFeature]EnableOptionalFeature";
  ModuleName = "PsDesiredStateConfiguration";
  LogPath = "C:\\WindowsOptionalFeatures";
 
-ModuleVersion = "1.0";
- ConfigurationName = "Windows_Optional_Feature";
+ModuleVersion = "1.0";
+ ConfigurationName = "Windows_Optional_Feature";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:07:08";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="Windows_Optional_Feature";
-
+
                     };

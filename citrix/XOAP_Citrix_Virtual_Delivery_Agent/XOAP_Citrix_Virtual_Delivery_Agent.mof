@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]Remote-Desktop-Services";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -24,8 +24,8 @@ ResourceID = "[WindowsFeature]RDS-RD-Server";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource3ref
 {
@@ -35,8 +35,8 @@ ResourceID = "[WindowsFeature]Server-Media-Foundation";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource4ref
 {
@@ -46,24 +46,24 @@ ResourceID = "[WindowsFeature]Remote-Assistance";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Virtual_Delivery_Agent";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:52:29";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="XOAP_Citrix_Virtual_Delivery_Agent";
-
+
                     };

@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]RDS-Licensing";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Licensing";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Licensing";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -24,24 +24,24 @@ ResourceID = "[WindowsFeature]RDS-Licensing-UI";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Licensing";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Licensing";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:10:21";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="XOAP_Citrix_Licensing";
-
+
                     };

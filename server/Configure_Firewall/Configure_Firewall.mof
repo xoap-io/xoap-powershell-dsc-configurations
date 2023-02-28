@@ -13,24 +13,24 @@ ModuleVersion = "9.0.0";
  Enabled = "True";
  Name = "IIS-WebServerRole-HTTP-In-TCP";
  Ensure = "Present";
- ModuleName = "NetworkingDsc";
- ConfigurationName = "Configure_Firewall";
+ ModuleName = "NetworkingDsc";
+ ConfigurationName = "Configure_Firewall";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 10:59:11";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="Configure_Firewall";
-
+
                     };

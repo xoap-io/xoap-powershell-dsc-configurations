@@ -14,8 +14,8 @@ DestinationPath = "c:\\temp\\HelloWorld.txt";
  Ensure = "Present";
  ModuleName = "PSDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource1ref
 {
@@ -25,8 +25,8 @@ ResourceID = "[WindowsFeature]WebServer";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -36,8 +36,8 @@ ResourceID = "[WindowsFeature]ManagementTools";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource3ref
 {
@@ -47,8 +47,8 @@ ResourceID = "[WindowsFeature]DefaultDoc";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+ModuleVersion = "1.0";
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
 };
 instance of DSC_WebSite as $DSC_WebSite1ref
 {
@@ -61,25 +61,25 @@ ModuleVersion = "4.0.0";
  State = "Stopped";
  ModuleName = "WebAdministrationDsc";
 
-DependsOn = {
-    "[WindowsFeature]WebServer"};
- ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
+DependsOn = {
+    "[WindowsFeature]WebServer"};
+ ConfigurationName = "HelloWorld_WebServer_Parameter_Module";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:00:42";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="HelloWorld_WebServer_Parameter_Module";
-
+
                     };
