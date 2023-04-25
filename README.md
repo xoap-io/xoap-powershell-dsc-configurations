@@ -17,9 +17,9 @@
 
 ## Introduction
 
-This is the XOAP PowerShell DSC configuration repository.
+This is the [XOAP](https://xoap.io) PowerShell DSC configuration repository.
 
-It is part of our XOAP Automation Forces Open Source community library to give you a quick start into Infrastructure as Code deployments with PowerShell DSC in addition to config.XO.
+It is part of our [XOAP](https://xoap.io) Automation Forces Open Source community library to give you a quick start into Infrastructure as Code deployments with PowerShell DSC in addition to config.XO.
 
 Please check the links for more info, including usage information and full documentation:
 
@@ -32,11 +32,11 @@ Please check the links for more info, including usage information and full docum
 
 ## Disclaimer
 
-**All configurations are provided AS IS. We are not responsible for anything that happens inside your environment because you applied the configurations and didn´t test them thoroughly before doing so.**
+**All configurations are provided AS IS. We are not responsible for anything that happens inside your environment because you applied the configurations and did not test them thoroughly before doing so.**
 
 Be sure to always test any of those configurations in separated test environment and test clients and servers.
 
->Some of the available DSC configurations make severe changes to security related configurations and could leave your Windows operating system in an unusable state.
+>Some of the available DSC configurations make severe changes to security-related configurations and could leave your Windows operating system in an unusable state.
 
 So please test once, twice or trice.
 
@@ -44,31 +44,40 @@ So please test once, twice or trice.
 
 ## Guidelines
 
-We are using the following guidelines to write code and make it easier for everyone to follow a distinctive guideline. Please check these links before starting to work on changes.
+We are using the following guidelines to write code and make it easier for everyone to follow a distinctive guideline.
+Please check these links before starting to work on changes.
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-Git Naming Conventions are an important part of the development process. They describe how Branches, Commit Messages, Pull Requests and Tags should look like to make the easily understandable for everybody in the development chain.
+Git Naming Conventions are an important part of the development process.
+They describe how Branches, Commit Messages,
+Pull Requests and Tags should look like to make them easily understandable for everybody in the development chain.
 
 [Git Naming Conventions](https://namingconvention.org/git/)
 
-The Conventional Commits specification is a lightweight convention on top of commit messages. It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of.
+He Conventional Commits specification is a lightweight convention on top of commit messages.
+It provides an easy set of rules for creating an explicit commit history; which makes it easier to write automated tools on top of.
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-The better a Pull Request description is, the better a review can understand and decide on how to review the changes. This improves implementation speed and reduces communication between the requester and the reviewer resulting in much less overhead.
+The better a Pull Request description is, the better a review can understand and decide on how to review the changes.
+This improves implementation speed and reduces communication between the requester,
+and the reviewer is resulting in much less overhead.
 
 [Writing A Great Pull Request Description](https://www.pullrequest.com/blog/writing-a-great-pull-request-description/)
 
-Versioning is a crucial part of everything as code. Without version tags, you cannot clearly create a stable environment 
-and be sure that your latest changes will not crash your production environment (sure it still can happen, but we are trying our best to implement everything that we can to reduce the risk).
+Versioning is a crucial part for Terraform Stacks and Modules.
+Without version tags you cannot clearly create a stable environment
+and be sure that your latest changes will not crash your production environment (sure it still can happen,
+but we are trying our best to implement everything that we can to reduce the risk)
 
 [Semantic Versioning](https://semver.org)
 
 ---
 
 ## Share the Love
-Like this project? Please give it a ★ on [our GitHub](https://github.com/xoap-io/xoap-powershell-dsc-configurations)! 
+Like this project? 
+Please give it a ★ on [our GitHub](https://github.com/xoap-io/xoap-powershell-dsc-configurations)! 
 It helps us a lot.
 
 ---
