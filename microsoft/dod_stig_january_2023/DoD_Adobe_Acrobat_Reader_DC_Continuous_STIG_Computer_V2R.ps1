@@ -2,9 +2,9 @@
 Configuration DoD_Adobe_Acrobat_Reader_DC_Continuous_STIG_Computer_V2R
 {
 
-	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
+	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
+	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
 	Node DoD_Adobe_Acrobat_Reader_DC_Continuous_STIG_Computer_V2R
 	{

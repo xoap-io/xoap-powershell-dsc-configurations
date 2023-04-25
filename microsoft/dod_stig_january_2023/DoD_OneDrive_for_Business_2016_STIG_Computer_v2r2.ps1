@@ -2,9 +2,9 @@
 Configuration DoD_OneDrive_for_Business_2016_STIG_Computer_v2r2
 {
 
-	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
+	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
+	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
 	Node DoD_OneDrive_for_Business_2016_STIG_Computer_v2r2
 	{
