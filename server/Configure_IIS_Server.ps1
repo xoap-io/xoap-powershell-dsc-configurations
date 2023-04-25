@@ -1,7 +1,7 @@
 configuration Configure_IIS_Server
 {
 Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-Import-DscResource -ModuleName 'WebAdministrationDSC' -ModuleVersion '4.0.0'
+Import-DscResource -ModuleName 'WebAdministrationDSC' -ModuleVersion '4.1.0'
 
     Node Configure_IIS_Server
     {

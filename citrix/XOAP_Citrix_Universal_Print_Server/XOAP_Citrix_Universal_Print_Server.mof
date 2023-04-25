@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]Print-Services";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Universal_Print_Server";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Universal_Print_Server";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -24,24 +24,24 @@ ResourceID = "[WindowsFeature]Print-Server";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Universal_Print_Server";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Universal_Print_Server";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 11:51:09";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="XOAP_Citrix_Universal_Print_Server";
-
+
                     };

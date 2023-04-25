@@ -1,7 +1,7 @@
 Configuration XOAP_W10_1809_Citrix_Optimizer
 {
 Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '8.5.0'
+Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
 Import-DscResource -ModuleName 'NetworkingDsc' -ModuleVersion '8.2.0'
 Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'

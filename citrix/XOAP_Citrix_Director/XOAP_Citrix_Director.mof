@@ -13,8 +13,8 @@ ResourceID = "[WindowsFeature]Web-Server";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource2ref
 {
@@ -24,8 +24,8 @@ ResourceID = "[WindowsFeature]Web-WebServer";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource3ref
 {
@@ -35,8 +35,8 @@ ResourceID = "[WindowsFeature]Web-Common-Http";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource4ref
 {
@@ -46,8 +46,8 @@ ResourceID = "[WindowsFeature]Web-Default-Doc";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource5ref
 {
@@ -57,8 +57,8 @@ ResourceID = "[WindowsFeature]Web-Dir-Browsing";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource6ref
 {
@@ -68,8 +68,8 @@ ResourceID = "[WindowsFeature]Web-Http-Errors";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource7ref
 {
@@ -79,8 +79,8 @@ ResourceID = "[WindowsFeature]Web-Static-Content";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource8ref
 {
@@ -90,8 +90,8 @@ ResourceID = "[WindowsFeature]Web-Http-Redirect";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource9ref
 {
@@ -101,8 +101,8 @@ ResourceID = "[WindowsFeature]Web-Health";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource10ref
 {
@@ -112,8 +112,8 @@ ResourceID = "[WindowsFeature]Web-Http-Logging";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource11ref
 {
@@ -123,8 +123,8 @@ ResourceID = "[WindowsFeature]Web-Log-Libraries";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource12ref
 {
@@ -134,8 +134,8 @@ ResourceID = "[WindowsFeature]Web-Http-Tracing";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource13ref
 {
@@ -145,8 +145,8 @@ ResourceID = "[WindowsFeature]Web-Performance";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource14ref
 {
@@ -156,8 +156,8 @@ ResourceID = "[WindowsFeature]Web-Stat-Compression";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource15ref
 {
@@ -167,8 +167,8 @@ ResourceID = "[WindowsFeature]Web-Dyn-Compression";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource16ref
 {
@@ -178,8 +178,8 @@ ResourceID = "[WindowsFeature]Web-Security";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource17ref
 {
@@ -189,8 +189,8 @@ ResourceID = "[WindowsFeature]Web-Filtering";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource18ref
 {
@@ -200,8 +200,8 @@ ResourceID = "[WindowsFeature]Web-Basic-Auth";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource19ref
 {
@@ -211,8 +211,8 @@ ResourceID = "[WindowsFeature]Web-Windows-Auth";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource20ref
 {
@@ -222,8 +222,8 @@ ResourceID = "[WindowsFeature]Web-App-Dev";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource21ref
 {
@@ -233,8 +233,8 @@ ResourceID = "[WindowsFeature]Web-Net-Ext45";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource22ref
 {
@@ -244,8 +244,8 @@ ResourceID = "[WindowsFeature]Web-ASP";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource23ref
 {
@@ -255,8 +255,8 @@ ResourceID = "[WindowsFeature]Web-Asp-Net45";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource24ref
 {
@@ -266,8 +266,8 @@ ResourceID = "[WindowsFeature]Web-CGI";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource25ref
 {
@@ -277,8 +277,8 @@ ResourceID = "[WindowsFeature]Web-ISAPI-Ext";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource26ref
 {
@@ -288,8 +288,8 @@ ResourceID = "[WindowsFeature]Web-ISAPI-Filter";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource27ref
 {
@@ -299,8 +299,8 @@ ResourceID = "[WindowsFeature]Web-Includes";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource28ref
 {
@@ -310,8 +310,8 @@ ResourceID = "[WindowsFeature]Web-Mgmt-Tools";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource29ref
 {
@@ -321,8 +321,8 @@ ResourceID = "[WindowsFeature]Web-Mgmt-Console";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource30ref
 {
@@ -332,8 +332,8 @@ ResourceID = "[WindowsFeature]Web-Mgmt-Compat";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource31ref
 {
@@ -343,8 +343,8 @@ ResourceID = "[WindowsFeature]Web-Metabase";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource32ref
 {
@@ -354,8 +354,8 @@ ResourceID = "[WindowsFeature]Web-Lgcy-Mgmt-Console";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource33ref
 {
@@ -365,8 +365,8 @@ ResourceID = "[WindowsFeature]Web-Lgcy-Scripting";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource34ref
 {
@@ -376,8 +376,8 @@ ResourceID = "[WindowsFeature]Web-WMI";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource35ref
 {
@@ -387,8 +387,8 @@ ResourceID = "[WindowsFeature]Web-Scripting-Tools";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource36ref
 {
@@ -398,8 +398,8 @@ ResourceID = "[WindowsFeature]NET-Framework-45-ASPNET";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource37ref
 {
@@ -409,8 +409,8 @@ ResourceID = "[WindowsFeature]NET-WCF-HTTP-Activation45";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource38ref
 {
@@ -420,8 +420,8 @@ ResourceID = "[WindowsFeature]Remote-Assistance";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource39ref
 {
@@ -431,8 +431,8 @@ ResourceID = "[WindowsFeature]WAS";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource40ref
 {
@@ -442,8 +442,8 @@ ResourceID = "[WindowsFeature]WAS-Process-Model";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of MSFT_RoleResource as $MSFT_RoleResource41ref
 {
@@ -453,24 +453,24 @@ ResourceID = "[WindowsFeature]WAS-Config-APIs";
  Ensure = "Present";
  ModuleName = "PsDesiredStateConfiguration";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_Citrix_Director";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_Citrix_Director";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 10:55:23";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="XOAP_Citrix_Director";
-
+
                     };

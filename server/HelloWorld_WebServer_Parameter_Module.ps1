@@ -7,7 +7,7 @@ Configuration HelloWorld_WebServer_Parameter_Module
     # )
 
 Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-Import-DscResource -ModuleName 'WebAdministrationDSC' -ModuleVersion '4.0.0'
+Import-DscResource -ModuleName 'WebAdministrationDSC' -ModuleVersion '4.1.0'
 
     Node HelloWorld_WebServer_Parameter_Module 
     {

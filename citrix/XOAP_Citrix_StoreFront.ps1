@@ -1,7 +1,7 @@
 
 Configuration XOAP_Citrix_StoreFront
 {
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '8.5.0'
+Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
 Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
     Node XOAP_Citrix_StoreFront

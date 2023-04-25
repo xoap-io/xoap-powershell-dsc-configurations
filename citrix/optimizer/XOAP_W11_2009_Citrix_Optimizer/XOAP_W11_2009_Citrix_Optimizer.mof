@@ -14,8 +14,8 @@ ResourceID = "[Service]AJRouter";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource2ref
 {
@@ -26,8 +26,8 @@ ResourceID = "[Service]ALG";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource3ref
 {
@@ -38,8 +38,8 @@ ResourceID = "[Service]BthAvctpSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource4ref
 {
@@ -50,8 +50,8 @@ ResourceID = "[Service]BDESVC";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource5ref
 {
@@ -62,8 +62,8 @@ ResourceID = "[Service]wbengine";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource6ref
 {
@@ -74,8 +74,8 @@ ResourceID = "[Service]BTAGService";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource7ref
 {
@@ -86,8 +86,8 @@ ResourceID = "[Service]bthserv";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource8ref
 {
@@ -98,8 +98,8 @@ ResourceID = "[Service]PeerDistSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource9ref
 {
@@ -110,8 +110,8 @@ ResourceID = "[Service]DusmSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource10ref
 {
@@ -122,8 +122,8 @@ ResourceID = "[Service]DPS";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource11ref
 {
@@ -134,8 +134,8 @@ ResourceID = "[Service]WdiServiceHost";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource12ref
 {
@@ -146,8 +146,8 @@ ResourceID = "[Service]WdiSystemHost";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource13ref
 {
@@ -158,8 +158,8 @@ ResourceID = "[Service]TrkWks";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource14ref
 {
@@ -170,8 +170,8 @@ ResourceID = "[Service]MapsBroker";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource15ref
 {
@@ -182,8 +182,8 @@ ResourceID = "[Service]EFS";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource16ref
 {
@@ -194,8 +194,8 @@ ResourceID = "[Service]fdPHost";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource17ref
 {
@@ -206,8 +206,8 @@ ResourceID = "[Service]FDResPub";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource18ref
 {
@@ -218,8 +218,8 @@ ResourceID = "[Service]lfsvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource19ref
 {
@@ -230,8 +230,8 @@ ResourceID = "[Service]SharedAccess";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource20ref
 {
@@ -242,8 +242,8 @@ ResourceID = "[Service]CscService";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource21ref
 {
@@ -254,8 +254,8 @@ ResourceID = "[Service]WpcMonSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource22ref
 {
@@ -266,8 +266,8 @@ ResourceID = "[Service]RetailDemo";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource23ref
 {
@@ -278,8 +278,8 @@ ResourceID = "[Service]SensrSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource24ref
 {
@@ -290,8 +290,8 @@ ResourceID = "[Service]SSDPSRV";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource25ref
 {
@@ -302,8 +302,8 @@ ResourceID = "[Service]upnphost";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource26ref
 {
@@ -314,8 +314,8 @@ ResourceID = "[Service]VacSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource27ref
 {
@@ -326,8 +326,8 @@ ResourceID = "[Service]wcncsvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource28ref
 {
@@ -338,8 +338,8 @@ ResourceID = "[Service]WMPNetworkSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource29ref
 {
@@ -350,8 +350,8 @@ ResourceID = "[Service]icssvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource30ref
 {
@@ -362,8 +362,8 @@ ResourceID = "[Service]WlanSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource31ref
 {
@@ -374,8 +374,8 @@ ResourceID = "[Service]WwanSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource32ref
 {
@@ -386,8 +386,8 @@ ResourceID = "[Service]XboxGipSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource33ref
 {
@@ -398,8 +398,8 @@ ResourceID = "[Service]XblAuthManager";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource34ref
 {
@@ -410,8 +410,8 @@ ResourceID = "[Service]XblGameSave";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource35ref
 {
@@ -422,8 +422,8 @@ ResourceID = "[Service]XboxNetApiSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource36ref
 {
@@ -434,8 +434,8 @@ ResourceID = "[Service]SysMain";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource37ref
 {
@@ -446,8 +446,8 @@ ResourceID = "[Service]WerSvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource38ref
 {
@@ -458,8 +458,8 @@ ResourceID = "[Service]WSearch";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Disabled";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_ServiceResource as $MSFT_ServiceResource39ref
 {
@@ -470,8 +470,8 @@ ResourceID = "[Service]defragsvc";
  ModuleName = "PsDesiredStateConfiguration";
  StartupType = "Manual";
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage1ref
 {
@@ -480,8 +480,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.BingWeather_4.25.20211.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::285::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage2ref
 {
@@ -490,8 +490,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.DesktopAppInstaller_2021.1207.634.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::291::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage3ref
 {
@@ -500,8 +500,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.GetHelp_10.2111.43421.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::297::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage4ref
 {
@@ -510,8 +510,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Getstarted_2021.2111.2.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::303::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage5ref
 {
@@ -520,8 +520,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.HEIFImageExtension_1.0.43012.0_x64__8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::309::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage6ref
 {
@@ -530,8 +530,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Microsoft3DViewer_2021.2107.7012.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::315::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage7ref
 {
@@ -540,8 +540,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.MicrosoftOfficeHub_18.2110.13110.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::321::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage8ref
 {
@@ -550,8 +550,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.MicrosoftSolitaireCollection_4.12.1050.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::327::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage9ref
 {
@@ -560,8 +560,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.MicrosoftStickyNotes_4.2.2.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::333::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage10ref
 {
@@ -570,8 +570,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.MixedReality.Portal_2000.21051.1282.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::339::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage11ref
 {
@@ -580,8 +580,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.MSPaint_2021.2105.4017.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::345::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage12ref
 {
@@ -590,8 +590,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Office.OneNote_16001.14326.20674.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::351::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage13ref
 {
@@ -600,8 +600,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.People_2021.2105.4.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::357::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage14ref
 {
@@ -610,8 +610,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.ScreenSketch_2020.814.2355.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::363::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage15ref
 {
@@ -620,8 +620,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.SkypeApp_15.79.95.0_neutral_~_kzf8qxf38zg5c";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::369::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage16ref
 {
@@ -630,8 +630,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.StorePurchaseApp_12109.1001.10.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::375::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage17ref
 {
@@ -640,8 +640,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.VP9VideoExtensions_1.0.42791.0_x64__8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::381::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage18ref
 {
@@ -650,8 +650,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Wallet_2.4.18324.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::387::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage19ref
 {
@@ -660,8 +660,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WebMediaExtensions_1.0.42192.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::393::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage20ref
 {
@@ -670,8 +670,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WebpImageExtension_1.0.42351.0_x64__8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::399::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage21ref
 {
@@ -680,8 +680,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Windows.Photos_2021.21090.10008.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::405::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage22ref
 {
@@ -690,8 +690,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsAlarms_2021.2101.28.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::411::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage23ref
 {
@@ -700,8 +700,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsCalculator_2020.2103.8.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::417::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage24ref
 {
@@ -710,8 +710,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsCamera_2021.105.10.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::423::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage25ref
 {
@@ -720,8 +720,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]microsoft.windowscommunicationsapps_16005.14326.20544.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::429::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage26ref
 {
@@ -730,8 +730,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsFeedbackHub_2022.106.2230.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::435::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage27ref
 {
@@ -740,8 +740,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsMaps_2021.2104.2.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::441::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage28ref
 {
@@ -750,8 +750,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsSoundRecorder_2021.2103.28.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::447::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage29ref
 {
@@ -760,8 +760,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.WindowsStore_22112.1401.2.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::453::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage30ref
 {
@@ -770,8 +770,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.Xbox.TCUI_1.24.10001.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::459::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage31ref
 {
@@ -780,8 +780,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.XboxApp_48.78.15001.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::465::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage32ref
 {
@@ -790,8 +790,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.XboxGameOverlay_1.54.4001.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::471::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage33ref
 {
@@ -800,8 +800,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.XboxGamingOverlay_5.721.12013.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::477::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage34ref
 {
@@ -810,8 +810,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.XboxIdentityProvider_12.83.12001.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::483::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage35ref
 {
@@ -820,8 +820,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.XboxSpeechToTextOverlay_1.21.13002.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::489::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage36ref
 {
@@ -830,8 +830,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.YourPhone_1.21121.250.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::495::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage37ref
 {
@@ -840,8 +840,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.ZuneMusic_2019.21102.11411.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::501::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of cAppxProvisionedPackage as $cAppxProvisionedPackage38ref
 {
@@ -850,8 +850,8 @@ ModuleVersion = "0.1.0";
  ResourceID = "[cAppxProvisionedPackage]Microsoft.ZuneVideo_2019.21111.10511.0_neutral_~_8wekyb3d8bbwe";
  SourceInfo = "D:\\SynologyDrive\\_WIP\\xoap-powershell-dsc-configurations\\citrix\\optimizer\\XOAP_W11_2009_Citrix_Optimizer.ps1::507::9::cAppxProvisionedPackage";
  Ensure = "Absent";
- ModuleName = "XOAPAppxPackageDSC";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "XOAPAppxPackageDSC";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask1ref
 {
@@ -862,8 +862,8 @@ ModuleVersion = "8.5.0";
  TaskName = "AnalyzeSystem";
  TaskPath = "\\Microsoft\\Windows\\Power Efficiency Diagnostics";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask2ref
 {
@@ -874,8 +874,8 @@ ModuleVersion = "8.5.0";
  TaskName = "BfeOnServiceStartTypeChange";
  TaskPath = "\\Microsoft\\Windows\\Windows Filtering Platform";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask3ref
 {
@@ -886,8 +886,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Cellular";
  TaskPath = "\\Microsoft\\Windows\\Management\\Provisioning\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask4ref
 {
@@ -898,8 +898,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Consolidator";
  TaskPath = "\\Microsoft\\Windows\\Customer Experience Improvement Program";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask5ref
 {
@@ -910,8 +910,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Diagnostics";
  TaskPath = "\\Microsoft\\Windows\\DiskFootprint\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask6ref
 {
@@ -922,8 +922,8 @@ ModuleVersion = "8.5.0";
  TaskName = "FamilySafetyMonitor";
  TaskPath = "\\Microsoft\\Windows\\Shell";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask7ref
 {
@@ -934,8 +934,8 @@ ModuleVersion = "8.5.0";
  TaskName = "FamilySafetyRefreshTask";
  TaskPath = "\\Microsoft\\Windows\\Shell";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask8ref
 {
@@ -946,8 +946,8 @@ ModuleVersion = "8.5.0";
  TaskName = "File History (maintenance mode)";
  TaskPath = "\\Microsoft\\Windows\\FileHistory";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask9ref
 {
@@ -958,8 +958,8 @@ ModuleVersion = "8.5.0";
  TaskName = "WindowsActionDialog";
  TaskPath = "\\Microsoft\\Windows\\Location";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask10ref
 {
@@ -970,8 +970,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Notifications";
  TaskPath = "\\Microsoft\\Windows\\Location";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask11ref
 {
@@ -982,8 +982,8 @@ ModuleVersion = "8.5.0";
  TaskName = "MapsToastTask";
  TaskPath = "\\Microsoft\\Windows\\Maps";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask12ref
 {
@@ -994,8 +994,8 @@ ModuleVersion = "8.5.0";
  TaskName = "MapsUpdateTask";
  TaskPath = "\\Microsoft\\Windows\\Maps";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask13ref
 {
@@ -1006,8 +1006,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Microsoft Compatibility Appraiser";
  TaskPath = "\\Microsoft\\Windows\\Application Experience";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask14ref
 {
@@ -1018,8 +1018,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Microsoft-Windows-DiskDiagnosticDataCollector";
  TaskPath = "\\Microsoft\\Windows\\DiskDiagnostic";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask15ref
 {
@@ -1030,8 +1030,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Microsoft-Windows-DiskDiagnosticResolver";
  TaskPath = "\\Microsoft\\Windows\\DiskDiagnostic";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask16ref
 {
@@ -1042,8 +1042,8 @@ ModuleVersion = "8.5.0";
  TaskName = "MNO Metadata Parser";
  TaskPath = "\\Microsoft\\Windows\\Mobile Broadband Accounts";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask17ref
 {
@@ -1054,8 +1054,8 @@ ModuleVersion = "8.5.0";
  TaskName = "NotificationTask";
  TaskPath = "\\Microsoft\\Windows\\WwanSvc\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask18ref
 {
@@ -1066,8 +1066,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ProactiveScan";
  TaskPath = "\\Microsoft\\Windows\\CHKDSK";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask19ref
 {
@@ -1078,8 +1078,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ProcessMemoryDiagnosticEvents";
  TaskPath = "\\Microsoft\\Windows\\MemoryDiagnostic";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask20ref
 {
@@ -1090,8 +1090,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ProgramDataUpdater";
  TaskPath = "\\Microsoft\\Windows\\Application Experience";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask21ref
 {
@@ -1102,8 +1102,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Proxy";
  TaskPath = "\\Microsoft\\Windows\\Autochk";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask22ref
 {
@@ -1114,8 +1114,8 @@ ModuleVersion = "8.5.0";
  TaskName = "RecommendedTroubleshootingScanner";
  TaskPath = "\\Microsoft\\Windows\\Diagnosis\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask23ref
 {
@@ -1126,8 +1126,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ReconcileFeatures";
  TaskPath = "\\Microsoft\\Windows\\Flighting\\FeatureConfig\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask24ref
 {
@@ -1138,8 +1138,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ReconcileLanguageResources";
  TaskPath = "\\Microsoft\\Windows\\LanguageComponentsInstaller\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask25ref
 {
@@ -1150,8 +1150,8 @@ ModuleVersion = "8.5.0";
  TaskName = "RefreshCache";
  TaskPath = "\\Microsoft\\Windows\\Flighting\\OneSettings\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask26ref
 {
@@ -1162,8 +1162,8 @@ ModuleVersion = "8.5.0";
  TaskName = "RegIdleBackup";
  TaskPath = "\\Microsoft\\Windows\\Registry";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask27ref
 {
@@ -1174,8 +1174,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ResolutionHost";
  TaskPath = "\\Microsoft\\Windows\\WDI";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask28ref
 {
@@ -1186,8 +1186,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ResPriStaticDbSync";
  TaskPath = "\\Microsoft\\Windows\\Sysmain\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask29ref
 {
@@ -1198,8 +1198,8 @@ ModuleVersion = "8.5.0";
  TaskName = "RunFullMemoryDiagnostic";
  TaskPath = "\\Microsoft\\Windows\\MemoryDiagnostic";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask30ref
 {
@@ -1210,8 +1210,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ScanForUpdates";
  TaskPath = "\\Microsoft\\Windows\\InstallService\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask31ref
 {
@@ -1222,8 +1222,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ScanForUpdatesAsUser";
  TaskPath = "\\Microsoft\\Windows\\InstallService\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask32ref
 {
@@ -1234,8 +1234,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Scheduled";
  TaskPath = "\\Microsoft\\Windows\\Diagnosis";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask33ref
 {
@@ -1246,8 +1246,8 @@ ModuleVersion = "8.5.0";
  TaskName = "ScheduledDefrag";
  TaskPath = "\\Microsoft\\Windows\\Defrag";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask34ref
 {
@@ -1258,8 +1258,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SilentCleanup";
  TaskPath = "\\Microsoft\\Windows\\DiskCleanup\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask35ref
 {
@@ -1270,8 +1270,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SmartRetry";
  TaskPath = "\\Microsoft\\Windows\\InstallService\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask36ref
 {
@@ -1282,8 +1282,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SpaceAgentTask";
  TaskPath = "\\Microsoft\\Windows\\SpacePort\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask37ref
 {
@@ -1294,8 +1294,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SpaceManagerTask";
  TaskPath = "\\Microsoft\\Windows\\SpacePort\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask38ref
 {
@@ -1306,8 +1306,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SpeechModelDownloadTask";
  TaskPath = "\\Microsoft\\Windows\\Speech\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask39ref
 {
@@ -1318,8 +1318,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Sqm-Tasks";
  TaskPath = "\\Microsoft\\Windows\\PI\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask40ref
 {
@@ -1330,8 +1330,8 @@ ModuleVersion = "8.5.0";
  TaskName = "SR";
  TaskPath = "\\Microsoft\\Windows\\SystemRestore";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask41ref
 {
@@ -1342,8 +1342,8 @@ ModuleVersion = "8.5.0";
  TaskName = "StartComponentCleanup";
  TaskPath = "\\Microsoft\\Windows\\Servicing";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask42ref
 {
@@ -1354,8 +1354,8 @@ ModuleVersion = "8.5.0";
  TaskName = "StartupAppTask";
  TaskPath = "\\Microsoft\\Windows\\Application Experience";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask43ref
 {
@@ -1366,8 +1366,8 @@ ModuleVersion = "8.5.0";
  TaskName = "StorageSense";
  TaskPath = "\\Microsoft\\Windows\\DiskFootprint\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask44ref
 {
@@ -1378,8 +1378,8 @@ ModuleVersion = "8.5.0";
  TaskName = "UninstallDeviceTask";
  TaskPath = "\\Microsoft\\Windows\\Bluetooth\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask45ref
 {
@@ -1390,8 +1390,8 @@ ModuleVersion = "8.5.0";
  TaskName = "UsbCeip";
  TaskPath = "\\Microsoft\\Windows\\Customer Experience Improvement Program";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask46ref
 {
@@ -1402,8 +1402,8 @@ ModuleVersion = "8.5.0";
  TaskName = "Usb-Notifications";
  TaskPath = "\\Microsoft\\Windows\\USB\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask47ref
 {
@@ -1414,8 +1414,8 @@ ModuleVersion = "8.5.0";
  TaskName = "VerifyWinRE";
  TaskPath = "\\Microsoft\\Windows\\RecoveryEnvironment";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask48ref
 {
@@ -1426,8 +1426,8 @@ ModuleVersion = "8.5.0";
  TaskName = "WIM-Hash-Management";
  TaskPath = "\\Microsoft\\Windows\\WOF\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask49ref
 {
@@ -1438,8 +1438,8 @@ ModuleVersion = "8.5.0";
  TaskName = "QueueReporting";
  TaskPath = "\\Microsoft\\Windows\\Windows Error Reporting";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask50ref
 {
@@ -1450,8 +1450,8 @@ ModuleVersion = "8.5.0";
  TaskName = "UpdateLibrary";
  TaskPath = "\\Microsoft\\Windows\\Windows Media Sharing";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask51ref
 {
@@ -1462,8 +1462,8 @@ ModuleVersion = "8.5.0";
  TaskName = "WinSAT";
  TaskPath = "\\Microsoft\\Windows\\Maintenance";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask52ref
 {
@@ -1474,8 +1474,8 @@ ModuleVersion = "8.5.0";
  TaskName = "WsSwapAssessmentTask";
  TaskPath = "\\Microsoft\\Windows\\Sysmain\\";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of DSC_ScheduledTask as $DSC_ScheduledTask53ref
 {
@@ -1486,8 +1486,8 @@ ModuleVersion = "8.5.0";
  TaskName = "XblGameSaveTask";
  TaskPath = "\\Microsoft\\XblGameSave";
  Ensure = "Absent";
- ModuleName = "ComputerManagementDsc";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ ModuleName = "ComputerManagementDsc";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource1ref
 {
@@ -1502,8 +1502,8 @@ ResourceID = "[Registry]DeleteUserAppContainersOnLogoff";
     "1"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource2ref
 {
@@ -1518,8 +1518,8 @@ ResourceID = "[Registry]EnableAutoLayout";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource3ref
 {
@@ -1534,8 +1534,8 @@ ResourceID = "[Registry]Enable";
     "N"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource4ref
 {
@@ -1550,8 +1550,8 @@ ResourceID = "[Registry]ScreenSaveActive";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource5ref
 {
@@ -1566,8 +1566,8 @@ ResourceID = "[Registry]HibernateEnabled";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource6ref
 {
@@ -1582,8 +1582,8 @@ ResourceID = "[Registry]CrashDumpEnabled";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource7ref
 {
@@ -1598,8 +1598,8 @@ ResourceID = "[Registry]AllowStorageSenseGlobal";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource8ref
 {
@@ -1614,8 +1614,8 @@ ResourceID = "[Registry]EnableFirstLogonAnimation";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource9ref
 {
@@ -1630,8 +1630,8 @@ ResourceID = "[Registry]ErrorMode";
     "2"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource10ref
 {
@@ -1646,8 +1646,8 @@ ResourceID = "[Registry]AllowCortana";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource11ref
 {
@@ -1662,8 +1662,8 @@ ResourceID = "[Registry]NoAutoUpdate";
     "1"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of MSFT_RegistryResource as $MSFT_RegistryResource12ref
 {
@@ -1678,24 +1678,24 @@ ResourceID = "[Registry]CEIPEnable";
     "0"
 };
 
-ModuleVersion = "1.0";
- ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
+ModuleVersion = "1.0";
+ ConfigurationName = "XOAP_W11_2009_Citrix_Optimizer";
 };
 instance of OMI_ConfigurationDocument
-
+
                     {
  Version="2.0.0";
-
+
                         MinimumCompatibleVersion = "1.0.0";
-
+
                         CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
-
+
                         Author="s.sokolic";
-
+
                         GenerationDate="10/29/2022 13:59:34";
-
+
                         GenerationHost="DESKTOP-RQ1FOQF";
-
+
                         Name="XOAP_W11_2009_Citrix_Optimizer";
-
+
                     };
