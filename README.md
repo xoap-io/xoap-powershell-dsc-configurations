@@ -60,14 +60,16 @@ The better a Pull Request description is, the better a review can understand and
 
 [Writing A Great Pull Request Description](https://www.pullrequest.com/blog/writing-a-great-pull-request-description/)
 
-Versioning is a crucial part for everything as code. Without version tags you cannot clearly create a stable environment and be sure that your latest changes won't crash your production environment (sure it still can happen, but we are trying our best to implement everything that we can to reduce the risk)
+Versioning is a crucial part of everything as code. Without version tags, you cannot clearly create a stable environment 
+and be sure that your latest changes will not crash your production environment (sure it still can happen, but we are trying our best to implement everything that we can to reduce the risk).
 
 [Semantic Versioning](https://semver.org)
 
 ---
 
 ## Share the Love
-Like this project? Please give it a ★ on [our GitHub](https://github.com/xoap-io/xoap-uberagent-kibana-dashboards)! (it helps us a lot).
+Like this project? Please give it a ★ on [our GitHub](https://github.com/xoap-io/xoap-powershell-dsc-configurations)! 
+It helps us a lot.
 
 ---
 
@@ -97,7 +99,8 @@ PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 ### Local usage
 
-On most supported Windows versions you don´t have to do anything. On windows versions prior to Windows Server 2016 or Windows 10 you should install Windows Management Framework 5.1.
+On most supported Windows versions, you do not have to do anything. 
+On windows versions prior to Windows Server 2016 or Windows 10, you should install Windows Management Framework 5.1.
 You can download it [here](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
 #### Compile and Apply 
@@ -126,7 +129,7 @@ Configuration MSTF_SecurityBaseline_Edge_v107_Computer
 }
 ```
 
-In order to compile this example you need to take care that all the referenced DSC modules are available locally.
+In order to compile this example, you need to take care that all the referenced DSC modules are available locally.
 
 You can check availability with:
 
@@ -140,9 +143,11 @@ If DSC modules are missing, you can install them simply by e.g. running:
 Install-Module SecurityPolicyDSC
 ```
 
-It could be that you need to install PowerShellGet and the NuGet provider and that you have to trust the PSGallery to be able to install the DSC modules.
+It could be that you need to install PowerShellGet and the NuGet provider,
+and that you have to trust the PSGallery to be able to install the DSC modules.
 
-> Please be aware that this is the most basic example. We advise to always define the module versions in production environments before compiling them and to implement a versioning system to track changes to those DSC configurations. Not defining versions could lead to compiling errors because of functional changes between vmodule versions.
+> Please be aware that this is the most basic example. We advise to always define the module versions in production environments before compiling them and to implement a versioning system to track changes to those DSC configurations. 
+> Not defining versions could lead to compiling errors because of functional changes between module versions.
 
 Defining the versions of the modules could look like this:
 
@@ -168,7 +173,8 @@ Configuration MSTF_SecurityBaseline_Edge_v107_Computer
 }
 ```
 
-So now that all DSC modules are available and the module versions are defined you need to run the following command in your Powershell to compile it locally:
+So now that all DSC modules are available and the module versions are defined,
+you need to run the following command in your Powershell to compile it locally:
 
 ```
 . PATHTOYOURSCRIPT\MSTF_SecurityBaseline_Edge_v107_Computer.ps1
