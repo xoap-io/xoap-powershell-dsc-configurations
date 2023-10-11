@@ -1,11 +1,11 @@
-Configuration XOAP_W2K16_1607_Citrix_Optimizer
+Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
 {
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
-Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
+    Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+    Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-    Node XOAP_W2K16_1607_Citrix_Optimizer
+    Node 'XOAP_W2K16_1607_Citrix_Optimizer'
     {
         File 'XOAP-Folder'
         {
@@ -214,7 +214,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'AnalyzeSystem'
         TaskPath            = '\Microsoft\Windows\Power Efficiency Diagnostics'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -222,7 +222,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'BfeOnServiceStartTypeChange'
         TaskPath            = '\Microsoft\Windows\Windows Filtering Platform'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -230,7 +230,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Consolidator'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -238,7 +238,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'CreateObjectTask'
         TaskPath            = '\Microsoft\Windows\CloudExperienceHost'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -246,7 +246,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'IndexerAutomaticMaintenance'
         TaskPath            = '\Microsoft\Windows\Shell'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -254,7 +254,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'KernelCeipTask'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -262,7 +262,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'MapsToastTask'
         TaskPath            = '\Microsoft\Windows\Maps'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -270,7 +270,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Microsoft Compatibility Appraiser'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -278,7 +278,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticDataCollector'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -286,7 +286,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticResolver'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -294,7 +294,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'MNO Metadata Parser'
         TaskPath            = '\Microsoft\Windows\Mobile Broadband Accounts'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -302,7 +302,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'MobilityManager'
         TaskPath            = '\Microsoft\Windows\Ras'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -310,7 +310,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Notifications'
         TaskPath            = '\Microsoft\Windows\Location'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -318,7 +318,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ProactiveScan'
         TaskPath            = '\Microsoft\Windows\CHKDSK'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -326,7 +326,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ProcessMemoryDiagnosticEvents'
         TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -334,7 +334,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ProgramDataUpdater'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -342,7 +342,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Proxy'
         TaskPath            = '\Microsoft\Windows\Autochk'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -350,7 +350,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'QueueReporting'
         TaskPath            = '\Microsoft\Windows\Windows Error Reporting'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -358,7 +358,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'RegIdleBackup'
         TaskPath            = '\Microsoft\Windows\Registry'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -366,7 +366,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ResolutionHost'
         TaskPath            = '\Microsoft\Windows\WDI'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -374,7 +374,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'RunFullMemoryDiagnostic'
         TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -382,7 +382,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Scheduled'
         TaskPath            = '\Microsoft\Windows\Diagnosis'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -390,7 +390,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ScheduledDefrag'
         TaskPath            = '\Microsoft\Windows\Defrag'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -398,7 +398,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ServerManager'
         TaskPath            = '\Microsoft\Windows\Server Manager'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -406,7 +406,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'SmartScreenSpecific'
         TaskPath            = '\Microsoft\Windows\AppID'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -414,7 +414,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'StartComponentCleanup'
         TaskPath            = '\Microsoft\Windows\Servicing'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -422,7 +422,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'StartupAppTask'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -430,7 +430,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'TPM-Maintenance'
         TaskPath            = '\Microsoft\Windows\TPM'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -438,7 +438,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'UninstallDeviceTask'
         TaskPath            = '\Microsoft\Windows\Bluetooth'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -446,7 +446,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'UPnPHostConfig'
         TaskPath            = '\Microsoft\Windows\UPnP'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -454,7 +454,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'UsbCeip'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -462,7 +462,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'VerifyWinRE'
         TaskPath            = '\Microsoft\Windows\RecoveryEnvironment'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -470,7 +470,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Windows Defender Cache Maintenance'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -478,7 +478,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Windows Defender Cleanup'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -486,7 +486,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Windows Defender Scheduled Scan'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -494,7 +494,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Windows Defender Verification'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -502,7 +502,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'WinSAT'
         TaskPath            = '\Microsoft\Windows\Maintenance'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -510,7 +510,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'XblGameSaveTask'
         TaskPath            = '\Microsoft\XblGameSave'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -518,7 +518,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'XblGameSaveTaskLogon'
         TaskPath            = '\Microsoft\XblGameSave'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -595,4 +595,3 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         }
     }
 }
-XOAP_W2K16_1607_Citrix_Optimizer

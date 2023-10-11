@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W2K20H2_Member_Server
+Configuration 'MSTF_SecurityBaseline_W2K20H2_Member_Server'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W2K20H2_Member_Server
+	Node 'MSTF_SecurityBaseline_W2K20H2_Member_Server'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDriveTypeAutoRun'
          {

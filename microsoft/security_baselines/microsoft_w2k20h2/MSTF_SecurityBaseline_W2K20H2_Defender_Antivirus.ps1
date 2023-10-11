@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W2K20H2_Defender_Antivirus
+Configuration 'MSTF_SecurityBaseline_W2K20H2_Defender_Antivirus'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W2K20H2_Defender_Antivirus
+	Node 'MSTF_SecurityBaseline_W2K20H2_Defender_Antivirus'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\PUAProtection'
          {

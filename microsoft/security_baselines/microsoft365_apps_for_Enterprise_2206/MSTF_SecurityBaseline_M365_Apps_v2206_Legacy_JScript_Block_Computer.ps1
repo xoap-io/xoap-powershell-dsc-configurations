@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_M365_Apps_v2206_Legacy_JScript_Block_Computer
+Configuration 'MSTF_SecurityBaseline_M365_Apps_v2206_Legacy_JScript_Block_Computer'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_M365_Apps_v2206_Legacy_JScript_Block_Computer
+	Node 'MSTF_SecurityBaseline_M365_Apps_v2206_Legacy_JScript_Block_Computer'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\software\policies\microsoft\internet explorer\main\featurecontrol\FEATURE_RESTRICT_LEGACY_JSCRIPT_PER_SECURITY_ZONE\excel.exe'
          {
