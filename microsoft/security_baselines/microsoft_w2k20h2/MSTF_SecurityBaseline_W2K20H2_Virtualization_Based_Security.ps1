@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W2K20H2_Virtualization_Based_Security
+Configuration 'MSTF_SecurityBaseline_W2K20H2_Virtualization_Based_Security'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W2K20H2_Virtualization_Based_Security
+	Node 'MSTF_SecurityBaseline_W2K20H2_Virtualization_Based_Security'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity'
          {

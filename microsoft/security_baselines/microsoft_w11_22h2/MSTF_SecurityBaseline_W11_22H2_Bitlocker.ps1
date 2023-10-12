@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W11_22H2_Bitlocker
+Configuration 'MSTF_SecurityBaseline_W11_22H2_Bitlocker'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W11_22H2_Bitlocker
+	Node 'MSTF_SecurityBaseline_W11_22H2_Bitlocker'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\FVE\UseEnhancedPin'
          {

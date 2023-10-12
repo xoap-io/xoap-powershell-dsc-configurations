@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W2K19_Domain_Controller
+Configuration 'MSTF_SecurityBaseline_W2K19_Domain_Controller'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W2K19_Domain_Controller
+	Node 'MSTF_SecurityBaseline_W2K19_Domain_Controller'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDriveTypeAutoRun'
          {

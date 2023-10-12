@@ -1,11 +1,11 @@
-Configuration XOAP_W2k12R2_Citrix_Optimizer
+Configuration 'XOAP_W2k12R2_Citrix_Optimizer'
 {
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
-Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
+    Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+    Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-    Node XOAP_W2k12R2_Citrix_Optimizer
+    Node 'XOAP_W2k12R2_Citrix_Optimizer'
     {
         File 'XOAP-Folder'
         {
@@ -144,7 +144,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'AnalyzeSystem'
         TaskPath            = '\Microsoft\Windows\Power Efficiency Diagnostics'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -152,7 +152,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'AitAgent'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -160,7 +160,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'BfeOnServiceStartTypeChange'
         TaskPath            = '\Microsoft\Windows\Windows Filtering Platform'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -168,7 +168,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Consolidator'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -176,7 +176,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ServerCeipAssistant'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program\Server'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -184,7 +184,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ServerRoleCollector-RunOnce'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program\Server'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -192,7 +192,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticDataCollector'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -200,7 +200,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticResolver'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -208,7 +208,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'KernelCeipTask'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -216,7 +216,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ProactiveScan'
         TaskPath            = '\Microsoft\Windows\CHKDSK'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -224,7 +224,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ProgramDataUpdater'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -232,7 +232,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'Proxy'
         TaskPath            = '\Microsoft\Windows\Autochk'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -240,7 +240,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'RegIdleBackup'
         TaskPath            = '\Microsoft\Windows\Registry'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -248,7 +248,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ResolutionHost'
         TaskPath            = '\Microsoft\Windows\WDI'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -256,7 +256,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ScheduledDefrag'
         TaskPath            = '\Microsoft\Windows\Defrag'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -264,7 +264,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'ServerManager'
         TaskPath            = '\Microsoft\Windows\Server Manager'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -272,7 +272,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'StartComponentCleanup'
         TaskPath            = '\Microsoft\Windows\Servicing'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -280,7 +280,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'UsbCeip'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -288,7 +288,7 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         {
         TaskName            = 'QueueReporting'
         TaskPath            = '\Microsoft\Windows\Windows Error Reporting'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -374,4 +374,3 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         }
     }
 }
-XOAP_W2k12R2_Citrix_Optimizer

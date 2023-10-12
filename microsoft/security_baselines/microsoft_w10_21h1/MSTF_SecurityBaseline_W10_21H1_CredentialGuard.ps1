@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W10_21H1_CredentialGuard
+Configuration 'MSTF_SecurityBaseline_W10_21H1_CredentialGuard'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W10_21H1_CredentialGuard
+	Node 'MSTF_SecurityBaseline_W10_21H1_CredentialGuard'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity'
          {

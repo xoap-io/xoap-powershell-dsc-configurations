@@ -1,8 +1,8 @@
-Configuration CONFIGURATIONNAME
+Configuration 'CONFIGURATIONNAME'
 {
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
-    Node CONFIGURATIONNAME
+    Node 'CONFIGURATIONNAME'
     {
         WindowsOptionalFeature "Microsoft-Hyper-V-All"
         {
@@ -18,4 +18,3 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         }
     }
 }
-CONFIGURATIONNAME

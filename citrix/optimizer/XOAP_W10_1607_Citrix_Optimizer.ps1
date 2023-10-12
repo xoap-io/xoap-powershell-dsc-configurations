@@ -1,13 +1,13 @@
-Configuration XOAP_W10_1607_Citrix_Optimizer
+Configuration 'XOAP_W10_1607_Citrix_Optimizer'
 {
-Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
-Import-DscResource -ModuleName 'NetworkingDsc' -ModuleVersion '8.2.0'
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
-Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
+    Import-DscResource -ModuleName 'NetworkingDsc' -ModuleVersion '8.2.0'
+    Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
+    Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
 
-    Node XOAP_W10_1607_Citrix_Optimizer
+    Node 'XOAP_W10_1607_Citrix_Optimizer'
     {
         Service 'AJRouter'
         {
@@ -417,7 +417,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'AnalyzeSystem'
         TaskPath            = '\Microsoft\Windows\Power Efficiency Diagnostics'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -425,7 +425,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'BfeOnServiceStartTypeChange'
         TaskPath            = '\Microsoft\Windows\Windows Filtering Platform'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -433,7 +433,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Consolidator'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -441,7 +441,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'FamilySafetyMonitor'
         TaskPath            = '\Microsoft\Windows\Shell'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -449,7 +449,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'FamilySafetyRefreshTask'
         TaskPath            = '\Microsoft\Windows\Shell'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -457,7 +457,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'File History (maintenance mode)'
         TaskPath            = '\Microsoft\Windows\FileHistory'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -465,7 +465,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'KernelCeipTask'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -473,7 +473,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Microsoft Compatibility Appraiser'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -481,7 +481,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticDataCollector'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -489,7 +489,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Microsoft-Windows-DiskDiagnosticResolver'
         TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -497,7 +497,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'ProactiveScan'
         TaskPath            = '\Microsoft\Windows\CHKDSK'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -505,7 +505,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'ProcessMemoryDiagnosticEvents'
         TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -513,7 +513,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'ProgramDataUpdater'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -521,7 +521,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Proxy'
         TaskPath            = '\Microsoft\Windows\Autochk'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -529,7 +529,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'RegIdleBackup'
         TaskPath            = '\Microsoft\Windows\Registry'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -537,7 +537,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'ResolutionHost'
         TaskPath            = '\Microsoft\Windows\WDI'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -545,7 +545,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'RunFullMemoryDiagnostic'
         TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -553,7 +553,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Scheduled'
         TaskPath            = '\Microsoft\Windows\Diagnosis'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -561,7 +561,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'ScheduledDefrag'
         TaskPath            = '\Microsoft\Windows\Defrag'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -569,7 +569,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'SR'
         TaskPath            = '\Microsoft\Windows\SystemRestore'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -577,7 +577,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'StartComponentCleanup'
         TaskPath            = '\Microsoft\Windows\Servicing'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -585,7 +585,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'StartupAppTask'
         TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -593,7 +593,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'UsbCeip'
         TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -601,7 +601,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'VerifyWinRE'
         TaskPath            = '\Microsoft\Windows\RecoveryEnvironment'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -609,7 +609,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Windows Defender Cache Maintenance'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -617,7 +617,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Windows Defender Cleanup'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -625,7 +625,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Windows Defender Scheduled Scan'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -633,7 +633,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'Windows Defender Verification'
         TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -641,7 +641,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'WinSAT'
         TaskPath            = '\Microsoft\Windows\Maintenance'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -649,7 +649,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'XblGameSaveTask'
         TaskPath            = '\Microsoft\XblGameSave'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -657,7 +657,7 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         {
         TaskName            = 'XblGameSaveTaskLogon'
         TaskPath            = '\Microsoft\XblGameSave'
-        Enable              = [bool]$false
+        Enable              = $false
         Ensure              = 'Absent'
         }
 
@@ -761,4 +761,3 @@ Import-DscResource -ModuleName 'XOAPAppxPackageDSC' -ModuleVersion '0.1.0'
         }
     }
 }
-XOAP_W10_1607_Citrix_Optimizer

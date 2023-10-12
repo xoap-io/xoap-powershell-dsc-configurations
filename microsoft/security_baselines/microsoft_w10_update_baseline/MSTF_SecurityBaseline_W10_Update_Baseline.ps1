@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W10_Update_Baseline
+Configuration 'MSTF_SecurityBaseline_W10_Update_Baseline'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W10_Update_Baseline
+	Node 'MSTF_SecurityBaseline_W10_Update_Baseline'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936\DCSettingIndex'
          {
