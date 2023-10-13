@@ -1,10 +1,9 @@
-
-Configuration XOAP_Citrix_StoreFront
+Configuration 'XOAP_Citrix_StoreFront'
 {
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
 
-    Node XOAP_Citrix_StoreFront
+    Node 'XOAP_Citrix_StoreFront'
     {
         WindowsFeature 'Web-Server'
         {
@@ -139,4 +138,3 @@ Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
         }
     }
 }
-XOAP_Citrix_StoreFront

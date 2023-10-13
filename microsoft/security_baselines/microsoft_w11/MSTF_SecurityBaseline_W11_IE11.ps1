@@ -1,12 +1,12 @@
 ﻿
-Configuration MSTF_SecurityBaseline_W11_IE11
+Configuration 'MSTF_SecurityBaseline_W11_IE11'
 {
-
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_W11_IE11
+	Node 'MSTF_SecurityBaseline_W11_IE11'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext\RunThisTimeEnabled'
          {

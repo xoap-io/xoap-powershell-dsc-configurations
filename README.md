@@ -28,6 +28,15 @@ Please check the links for more info, including usage information and full docum
 - [Twitter](https://twitter.com/xoap_io)
 - [LinkedIn](https://www.linkedin.com/company/xoap_io)
 
+This repository hosts some of the most common DSC configurations that we use in our projects.
+
+You will find the following DSC configurations in this repository:
+
+- Citrix infrastructure and Citrix optimizer configurations
+- DoD STIG configurations
+- general Windows configurations
+- Microsoft security baseline configurations
+
 ---
 
 ## Disclaimer
@@ -36,7 +45,7 @@ Please check the links for more info, including usage information and full docum
 
 Be sure to always test any of those configurations in separated test environment and test clients and servers.
 
->Some of the available DSC configurations make severe changes to security-related configurations and could leave your Windows operating system in an unusable state.
+> Some of the available DSC configurations make severe changes to security-related configurations and could leave your Windows operating system in an unusable state.
 
 So please test once, twice or trice.
 
@@ -116,15 +125,13 @@ You can download it [here](https://www.microsoft.com/en-us/download/details.aspx
 
 A typical DSC configuration looks like this:
 
-```
-Configuration MSTF_SecurityBaseline_Edge_v107_Computer
+```PowerShell
+Configuration 'MSTF_SecurityBaseline_Edge_v107_Computer'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node MSTF_SecurityBaseline_Edge_v107_Computer
+	Node 'MSTF_SecurityBaseline_Edge_v107_Computer'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Edge\SitePerProcess'
          {
@@ -136,19 +143,20 @@ Configuration MSTF_SecurityBaseline_Edge_v107_Computer
          }
     }
 }
+MSTF_SecurityBaseline_Edge_v107_Computer -OutputPath 'C:\MSTF_SecurityBaseline_Edge_v107_Computer'
 ```
 
 In order to compile this example, you need to take care that all the referenced DSC modules are available locally.
 
 You can check availability with:
 
-```
+```PowerShell
 Get-DcsResource
 ```
 
 If DSC modules are missing, you can install them simply by e.g. running:
 
-```
+```PowerShell
 Install-Module SecurityPolicyDSC
 ```
 
@@ -160,15 +168,13 @@ and that you have to trust the PSGallery to be able to install the DSC modules.
 
 Defining the versions of the modules could look like this:
 
-```
-Configuration MSTF_SecurityBaseline_Edge_v107_Computer
+```PowerShell
+Configuration 'MSTF_SecurityBaseline_Edge_v107_Computer'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0' -ModuleVersion '1.2.0'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0' -ModuleVersion '1.4.0.0'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0' -ModuleVersion '2.1.0.0'
 
-	Node MSTF_SecurityBaseline_Edge_v107_Computer
+	Node 'MSTF_SecurityBaseline_Edge_v107_Computer'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Edge\SitePerProcess'
          {
@@ -185,7 +191,7 @@ Configuration MSTF_SecurityBaseline_Edge_v107_Computer
 So now that all DSC modules are available and the module versions are defined,
 you need to run the following command in your Powershell to compile it locally:
 
-```
+```PowerShell
 . PATHTOYOURSCRIPT\MSTF_SecurityBaseline_Edge_v107_Computer.ps1
 MSTF_SecurityBaseline_Edge_v107_Computer
 ```
@@ -194,7 +200,7 @@ You should now have a localhost.mof file in this location.
 
 The last step is to apply this configuration to your local host:
 
-```
+```PowerShell
 Start-DscConfiguration -Path PATHTOYOURCONFIGURATION\MSTF_SecurityBaseline_Edge_v107_Computer -Verbose -Wait
 ```
 
@@ -204,4 +210,4 @@ Start-DscConfiguration -Path PATHTOYOURCONFIGURATION\MSTF_SecurityBaseline_Edge_
 
 ### Usage in XOAP and config.XO
 
-Refer to our documentation [here](https://docs.xoap.io/configuration-management/quickstarts/add-configurations/)
+Refer to our documentation [here](https://docs.xoap.io/configuration-management/)

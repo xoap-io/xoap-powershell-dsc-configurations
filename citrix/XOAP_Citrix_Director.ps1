@@ -1,10 +1,9 @@
-
-Configuration XOAP_Citrix_Director
+Configuration 'XOAP_Citrix_Director'
 {
-Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
-Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
 
-    Node XOAP_Citrix_Director
+    Node 'XOAP_Citrix_Director'
     {
         WindowsFeature 'Web-Server'
         {
