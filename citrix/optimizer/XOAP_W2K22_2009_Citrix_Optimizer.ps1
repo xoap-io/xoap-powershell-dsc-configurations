@@ -14,435 +14,145 @@ Configuration 'XOAP_W2K22_2009_Citrix_Optimizer'
             DestinationPath = 'C:\XOAP'
         }
 
-        Service 'DPS'
-        {
-        Name        = 'DPS'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Optimize services
+        $services = @(
+            @{ Name = 'DPS'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'WdiServiceHost'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'WdiSystemHost'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'EFS'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'SharedAccess'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'SstpSvc'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'SysMain'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'WerSvc'; State = 'stopped'; StartupType = 'Disabled' },
+            @{ Name = 'defragsvc'; State = 'stopped'; StartupType = 'Manual' }
+        )
+        foreach ($svc in $services) {
+            Service $svc.Name {
+                Name        = $svc.Name
+                State       = $svc.State
+                StartupType = $svc.StartupType
+            }
         }
 
-        Service 'WdiServiceHost'
-        {
-        Name        = 'WdiServiceHost'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Optimize scheduled tasks
+        $tasks = @(
+            @{ TaskName = 'AnalyzeSystem'; TaskPath = '\Microsoft\Windows\Power Efficiency Diagnostics' },
+            @{ TaskName = 'BfeOnServiceStartTypeChange'; TaskPath = '\Microsoft\Windows\Windows Filtering Platform' },
+            @{ TaskName = 'Consolidator'; TaskPath = '\Microsoft\Windows\Customer Experience Improvement Program' },
+            @{ TaskName = 'CreateObjectTask'; TaskPath = '\Microsoft\Windows\CloudExperienceHost' },
+            @{ TaskName = 'IndexerAutomaticMaintenance'; TaskPath = '\Microsoft\Windows\Shell' },
+            @{ TaskName = 'MapsToastTask'; TaskPath = '\Microsoft\Windows\Maps' },
+            @{ TaskName = 'Microsoft Compatibility Appraiser'; TaskPath = '\Microsoft\Windows\Application Experience' },
+            @{ TaskName = 'Microsoft-Windows-DiskDiagnosticDataCollector'; TaskPath = '\Microsoft\Windows\DiskDiagnostic' },
+            @{ TaskName = 'Microsoft-Windows-DiskDiagnosticResolver'; TaskPath = '\Microsoft\Windows\DiskDiagnostic' },
+            @{ TaskName = 'MNO Metadata Parser'; TaskPath = '\Microsoft\Windows\Mobile Broadband Accounts' },
+            @{ TaskName = 'MobilityManager'; TaskPath = '\Microsoft\Windows\Ras' },
+            @{ TaskName = 'Notifications'; TaskPath = '\Microsoft\Windows\Location' },
+            @{ TaskName = 'ProactiveScan'; TaskPath = '\Microsoft\Windows\CHKDSK' },
+            @{ TaskName = 'ProcessMemoryDiagnosticEvents'; TaskPath = '\Microsoft\Windows\MemoryDiagnostic' },
+            @{ TaskName = 'ProgramDataUpdater'; TaskPath = '\Microsoft\Windows\Application Experience' },
+            @{ TaskName = 'Proxy'; TaskPath = '\Microsoft\Windows\Autochk' },
+            @{ TaskName = 'QueueReporting'; TaskPath = '\Microsoft\Windows\Windows Error Reporting' },
+            @{ TaskName = 'RegIdleBackup'; TaskPath = '\Microsoft\Windows\Registry' },
+            @{ TaskName = 'ResolutionHost'; TaskPath = '\Microsoft\Windows\WDI' },
+            @{ TaskName = 'RunFullMemoryDiagnostic'; TaskPath = '\Microsoft\Windows\MemoryDiagnostic' },
+            @{ TaskName = 'Scheduled'; TaskPath = '\Microsoft\Windows\Diagnosis' },
+            @{ TaskName = 'ScheduledDefrag'; TaskPath = '\Microsoft\Windows\Defrag' },
+            @{ TaskName = 'ServerManager'; TaskPath = '\Microsoft\Windows\Server Manager' },
+            @{ TaskName = 'StartComponentCleanup'; TaskPath = '\Microsoft\Windows\Servicing' },
+            @{ TaskName = 'StartupAppTask'; TaskPath = '\Microsoft\Windows\Application Experience' },
+            @{ TaskName = 'TPM-Maintenance'; TaskPath = '\Microsoft\Windows\TPM' },
+            @{ TaskName = 'UninstallDeviceTask'; TaskPath = '\Microsoft\Windows\Bluetooth' },
+            @{ TaskName = 'UPnPHostConfig'; TaskPath = '\Microsoft\Windows\UPnP' },
+            @{ TaskName = 'UsbCeip'; TaskPath = '\Microsoft\Windows\Customer Experience Improvement Program' },
+            @{ TaskName = 'VerifyWinRE'; TaskPath = '\Microsoft\Windows\RecoveryEnvironment' },
+            @{ TaskName = 'Windows Defender Cache Maintenance'; TaskPath = '\Microsoft\Windows\Windows Defender' },
+            @{ TaskName = 'Windows Defender Cleanup'; TaskPath = '\Microsoft\Windows\Windows Defender' },
+            @{ TaskName = 'Windows Defender Scheduled Scan'; TaskPath = '\Microsoft\Windows\Windows Defender' },
+            @{ TaskName = 'Windows Defender Verification'; TaskPath = '\Microsoft\Windows\Windows Defender' },
+            @{ TaskName = 'UpdateLibrary'; TaskPath = '\Microsoft\Windows\Windows Media Sharing' },
+            @{ TaskName = 'WinSAT'; TaskPath = '\Microsoft\Windows\Maintenance' },
+            @{ TaskName = 'Recovery-Check'; TaskPath = '\Microsoft\Windows\Workplace Join' }
+        )
+        foreach ($task in $tasks) {
+            ScheduledTask $task.TaskName {
+                TaskName   = $task.TaskName
+                TaskPath   = $task.TaskPath
+                Enable     = $false
+                Ensure     = 'Absent'
+            }
         }
 
-        Service 'WdiSystemHost'
-        {
-        Name        = 'WdiSystemHost'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Ensures user app containers are deleted on logoff to improve privacy and reduce leftover firewall rules
+        Registry 'DeleteUserAppContainersOnLogoff' {
+            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
+            Ensure      = 'Present'
+            ValueName   = 'DeleteUserAppContainersOnLogoff'
+            ValueType   = 'DWORD'
+            ValueData   = 1
         }
 
-        Service 'EFS'
-        {
-        Name        = 'EFS'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Disables automatic layout adjustments for desktop icons
+        Registry 'EnableAutoLayout' {
+            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
+            Ensure      = 'Present'
+            ValueName   = 'EnableAutoLayout'
+            ValueType   = 'DWORD'
+            ValueData   = 0
         }
 
-        Service 'SharedAccess'
-        {
-        Name        = 'SharedAccess'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Disables boot optimization defragmentation
+        Registry 'Enable' {
+            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
+            Ensure      = 'Present'
+            ValueName   = 'Enable'
+            ValueType   = 'String'
+            ValueData   = 'N'
         }
 
-        Service 'SstpSvc'
-        {
-        Name        = 'SstpSvc'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Disables default screensaver for all users
+        Registry 'ScreenSaveActive' {
+            Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
+            Ensure      = 'Present'
+            ValueName   = 'ScreenSaveActive'
+            ValueType   = 'DWORD'
+            ValueData   = 0
         }
 
-        Service 'SysMain'
-        {
-        Name        = 'SysMain'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Disables creation of crash dumps to save disk space
+        Registry 'CrashDumpEnabled' {
+            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
+            Ensure      = 'Present'
+            ValueName   = 'CrashDumpEnabled'
+            ValueType   = 'DWORD'
+            ValueData   = 0
         }
 
-        Service 'WerSvc'
-        {
-        Name        = 'WerSvc'
-        State       = 'stopped'
-        StartupType = 'Disabled'
+        # Improves NTFS performance by disabling last access time updates
+        Registry 'NtfsDisableLastAccessUpdate' {
+            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
+            Ensure      = 'Present'
+            ValueName   = 'NtfsDisableLastAccessUpdate'
+            ValueType   = 'DWORD'
+            ValueData   = 1
         }
 
-        Service 'defragsvc'
-        {
-        Name        = 'defragsvc'
-        State       = 'stopped'
-        StartupType = 'Manual'
+        # Suppresses system error popups and enables automatic error logging
+        Registry 'ErrorMode' {
+            Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
+            Ensure      = 'Present'
+            ValueName   = 'ErrorMode'
+            ValueType   = 'DWORD'
+            ValueData   = 2
         }
 
-        ScheduledTask 'AnalyzeSystem'
-        {
-        TaskName            = 'AnalyzeSystem'
-        TaskPath            = '\Microsoft\Windows\Power Efficiency Diagnostics'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'BfeOnServiceStartTypeChange'
-        {
-        TaskName            = 'BfeOnServiceStartTypeChange'
-        TaskPath            = '\Microsoft\Windows\Windows Filtering Platform'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Consolidator'
-        {
-        TaskName            = 'Consolidator'
-        TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'CreateObjectTask'
-        {
-        TaskName            = 'CreateObjectTask'
-        TaskPath            = '\Microsoft\Windows\CloudExperienceHost'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'IndexerAutomaticMaintenance'
-        {
-        TaskName            = 'IndexerAutomaticMaintenance'
-        TaskPath            = '\Microsoft\Windows\Shell'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'MapsToastTask'
-        {
-        TaskName            = 'MapsToastTask'
-        TaskPath            = '\Microsoft\Windows\Maps'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Microsoft Compatibility Appraiser'
-        {
-        TaskName            = 'Microsoft Compatibility Appraiser'
-        TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Microsoft-Windows-DiskDiagnosticDataCollector'
-        {
-        TaskName            = 'Microsoft-Windows-DiskDiagnosticDataCollector'
-        TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Microsoft-Windows-DiskDiagnosticResolver'
-        {
-        TaskName            = 'Microsoft-Windows-DiskDiagnosticResolver'
-        TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'MNO Metadata Parser'
-        {
-        TaskName            = 'MNO Metadata Parser'
-        TaskPath            = '\Microsoft\Windows\Mobile Broadband Accounts'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'MobilityManager'
-        {
-        TaskName            = 'MobilityManager'
-        TaskPath            = '\Microsoft\Windows\Ras'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Notifications'
-        {
-        TaskName            = 'Notifications'
-        TaskPath            = '\Microsoft\Windows\Location'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ProactiveScan'
-        {
-        TaskName            = 'ProactiveScan'
-        TaskPath            = '\Microsoft\Windows\CHKDSK'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ProcessMemoryDiagnosticEvents'
-        {
-        TaskName            = 'ProcessMemoryDiagnosticEvents'
-        TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ProgramDataUpdater'
-        {
-        TaskName            = 'ProgramDataUpdater'
-        TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Proxy'
-        {
-        TaskName            = 'Proxy'
-        TaskPath            = '\Microsoft\Windows\Autochk'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'QueueReporting'
-        {
-        TaskName            = 'QueueReporting'
-        TaskPath            = '\Microsoft\Windows\Windows Error Reporting'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'RegIdleBackup'
-        {
-        TaskName            = 'RegIdleBackup'
-        TaskPath            = '\Microsoft\Windows\Registry'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ResolutionHost'
-        {
-        TaskName            = 'ResolutionHost'
-        TaskPath            = '\Microsoft\Windows\WDI'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'RunFullMemoryDiagnostic'
-        {
-        TaskName            = 'RunFullMemoryDiagnostic'
-        TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Scheduled'
-        {
-        TaskName            = 'Scheduled'
-        TaskPath            = '\Microsoft\Windows\Diagnosis'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ScheduledDefrag'
-        {
-        TaskName            = 'ScheduledDefrag'
-        TaskPath            = '\Microsoft\Windows\Defrag'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'ServerManager'
-        {
-        TaskName            = 'ServerManager'
-        TaskPath            = '\Microsoft\Windows\Server Manager'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'StartComponentCleanup'
-        {
-        TaskName            = 'StartComponentCleanup'
-        TaskPath            = '\Microsoft\Windows\Servicing'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'StartupAppTask'
-        {
-        TaskName            = 'StartupAppTask'
-        TaskPath            = '\Microsoft\Windows\Application Experience'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'TPM-Maintenance'
-        {
-        TaskName            = 'TPM-Maintenance'
-        TaskPath            = '\Microsoft\Windows\TPM'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'UninstallDeviceTask'
-        {
-        TaskName            = 'UninstallDeviceTask'
-        TaskPath            = '\Microsoft\Windows\Bluetooth'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'UPnPHostConfig'
-        {
-        TaskName            = 'UPnPHostConfig'
-        TaskPath            = '\Microsoft\Windows\UPnP'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'UsbCeip'
-        {
-        TaskName            = 'UsbCeip'
-        TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'VerifyWinRE'
-        {
-        TaskName            = 'VerifyWinRE'
-        TaskPath            = '\Microsoft\Windows\RecoveryEnvironment'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Windows Defender Cache Maintenance'
-        {
-        TaskName            = 'Windows Defender Cache Maintenance'
-        TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Windows Defender Cleanup'
-        {
-        TaskName            = 'Windows Defender Cleanup'
-        TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Windows Defender Scheduled Scan'
-        {
-        TaskName            = 'Windows Defender Scheduled Scan'
-        TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Windows Defender Verification'
-        {
-        TaskName            = 'Windows Defender Verification'
-        TaskPath            = '\Microsoft\Windows\Windows Defender'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'UpdateLibrary'
-        {
-        TaskName            = 'UpdateLibrary'
-        TaskPath            = '\Microsoft\Windows\Windows Media Sharing'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'WinSAT'
-        {
-        TaskName            = 'WinSAT'
-        TaskPath            = '\Microsoft\Windows\Maintenance'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        ScheduledTask 'Recovery-Check'
-        {
-        TaskName            = 'Recovery-Check'
-        TaskPath            = '\Microsoft\Windows\Workplace Join'
-        Enable              = $false
-        Ensure              = 'Absent'
-        }
-
-        Registry 'DeleteUserAppContainersOnLogoff'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
-        Ensure      = 'Present'
-        ValueName   = 'DeleteUserAppContainersOnLogoff'
-        ValueType   = 'Dword'
-        ValueData   = '1'
-        }
-
-        Registry 'EnableAutoLayout'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
-        Ensure      = 'Present'
-        ValueName   = 'EnableAutoLayout'
-        ValueType   = 'DWORD'
-        ValueData   = '0'
-        }
-
-        Registry 'Enable'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
-        Ensure      = 'Present'
-        ValueName   = 'Enable'
-        ValueType   = 'String'
-        ValueData   = 'N'
-        }
-
-        Registry 'ScreenSaveActive'
-        {
-        Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
-        Ensure      = 'Present'
-        ValueName   = 'ScreenSaveActive'
-        ValueType   = 'DWORD'
-        ValueData   = '0'
-        }
-
-        Registry 'CrashDumpEnabled'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
-        Ensure      = 'Present'
-        ValueName   = 'CrashDumpEnabled'
-        ValueType   = 'DWORD'
-        ValueData   = '0'
-        }
-
-        Registry 'NtfsDisableLastAccessUpdate'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
-        Ensure      = 'Present'
-        ValueName   = 'NtfsDisableLastAccessUpdate'
-        ValueType   = 'DWORD'
-        ValueData   = '1'
-        }
-
-        Registry 'ErrorMode'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
-        Ensure      = 'Present'
-        ValueName   = 'ErrorMode'
-        ValueType   = 'DWORD'
-        ValueData   = '2'
-        }
-
-        Registry 'NoAutoUpdate'
-        {
-        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
-        Ensure      = 'Present'
-        ValueName   = 'NoAutoUpdate'
-        ValueType   = 'DWORD'
-        ValueData   = '1'
+        # Disables automatic Windows Updates
+        Registry 'NoAutoUpdate' {
+            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
+            Ensure      = 'Present'
+            ValueName   = 'NoAutoUpdate'
+            ValueType   = 'DWORD'
+            ValueData   = 1
         }
     }
 }

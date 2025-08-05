@@ -1,3 +1,6 @@
+
+# DSC Configuration: Configure_IIS_Server
+# Purpose: Installs IIS, sets default logging/app pool settings, and provides example for deploying content and a new site.
 configuration 'Configure_IIS_Server'
 {
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
@@ -5,13 +8,15 @@ configuration 'Configure_IIS_Server'
 
     Node 'Configure_IIS_Server'
     {
-        WindowsFeature 'WebServer'
+        # Installs the IIS Web-Server feature
+        WindowsFeature 'IIS_WebServer'
         {
             Ensure  = 'Present'
             Name    = 'Web-Server'
         }
 
-        WebSiteDefaults 'SiteDefaults'
+        # Sets default logging and application pool settings for all IIS sites
+        WebSiteDefaults 'IIS_SiteDefaults'
         {
             IsSingleInstance        = 'Yes'
             LogFormat               = 'IIS'
@@ -19,25 +24,24 @@ configuration 'Configure_IIS_Server'
             TraceLogDirectory       = 'C:\inetpub\logs\FailedReqLogFiles'
             DefaultApplicationPool  = 'DefaultAppPool'
             AllowSubDirConfig       = 'true'
-            DependsOn               = '[WindowsFeature]WebServer'
+            DependsOn               = '[WindowsFeature]IIS_WebServer'
         }
 
-        WebAppPoolDefaults 'PoolDefaults'
+        # Sets default settings for all IIS application pools
+        WebAppPoolDefaults 'IIS_AppPoolDefaults'
         {
-        IsSingleInstance      = 'Yes'
-        ManagedRuntimeVersion = 'v4.0'
-        IdentityType          = 'ApplicationPoolIdentity'
-        DependsOn             = '[WindowsFeature]WebServer'
+            IsSingleInstance      = 'Yes'
+            ManagedRuntimeVersion = 'v4.0'
+            IdentityType          = 'ApplicationPoolIdentity'
+            DependsOn             = '[WindowsFeature]IIS_WebServer'
         }
 
         <#
-        If you would like DSC to deploy your content in to a new site,
-        this section provides an example, as well as use of a certificate.
-
-        See more examples in the xWebAdministration resource project.
+        Example: Deploy content and create a new IIS site with HTTPS binding and certificate
+        See more examples in the xWebAdministration resource project:
         https://github.com/PowerShell/xWebAdministration/tree/dev/Examples
 
-        File WebContent
+        File 'WebContent'
         {
             Ensure          = "Present"
             SourcePath      = $SourcePath
@@ -47,7 +51,7 @@ configuration 'Configure_IIS_Server'
             DependsOn       = "[WindowsFeature]AspNet45"
         }
 
-        xWebsite NewWebsite
+        xWebsite 'NewWebsite'
         {
             Ensure          = "Present"
             Name            = $WebSiteName

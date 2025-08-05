@@ -1,3 +1,6 @@
+
+# DSC Configuration: Windows_Optional_Feature
+# Purpose: Enables the Telnet Client optional Windows feature and logs the operation.
 Configuration 'Windows_Optional_Feature'
 {
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
@@ -5,10 +8,11 @@ Configuration 'Windows_Optional_Feature'
 
     Node 'Windows_Optional_Feature'
     {
-        WindowsOptionalFeature 'EnableOptionalFeature'
+        # Enables the Telnet Client feature
+        WindowsOptionalFeature 'TelnetClient_Enable'
         {
             Name    = 'TelnetClient'
-            Ensure = 'Enable'
+            Ensure  = 'Enable'
             LogPath = "$env:HOMEDRIVE\WindowsOptionalFeatures"
         }
     }

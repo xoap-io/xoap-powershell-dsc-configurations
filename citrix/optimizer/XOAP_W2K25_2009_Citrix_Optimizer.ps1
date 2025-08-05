@@ -1,416 +1,280 @@
 Configuration 'XOAP_W2K25_2009_Citrix_Optimizer' {
-
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
     Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
     Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
+    # Services Section (optimized)
+    $servicesToDisable = @(
+        'AJRouter','ALG','BTAGService','bthserv','DPS','WdiServiceHost','WdiSystemHost','MapsBroker','EFS','fdPHost','FDResPub',
+        'SharedAccess','CscService','SEMgrSvc','SstpSvc','SensrSvc','shpamsvc','SSDPSRV','upnphost','WMPNetworkSvc','icssvc'
+    )
+    foreach ($svc in $servicesToDisable) {
+        Service $svc {
+            Name        = $svc
+            State       = 'Stopped'
+            StartupType = 'Disabled'
+        }
+    }
 
+    # Scheduled Tasks Section (optimized)
+    $scheduledTasks = @(
+        @{Name='AnalyzeSystem';Path='\Microsoft\Windows\Power Efficiency Diagnostics'},
+        @{Name='BfeOnServiceStartTypeChange';Path='\Microsoft\Windows\Windows Filtering Platform'},
+        @{Name='Consolidator';Path='\Microsoft\Windows\Customer Experience Improvement Program'},
+        @{Name='CreateObjectTask';Path='\Microsoft\Windows\CloudExperienceHost'},
+        @{Name='IndexerAutomaticMaintenance';Path='\Microsoft\Windows\Shell'},
+        @{Name='MapsToastTask';Path='\Microsoft\Windows\Maps'},
+        @{Name='Microsoft Compatibility Appraiser';Path='\Microsoft\Windows\Application Experience'},
+        @{Name='Microsoft-Windows-DiskDiagnosticDataCollector';Path='\Microsoft\Windows\DiskDiagnostic'},
+        @{Name='Microsoft-Windows-DiskDiagnosticResolver';Path='\Microsoft\Windows\DiskDiagnostic'},
+        @{Name='MNO Metadata Parser';Path='\Microsoft\Windows\Mobile Broadband Accounts'},
+        @{Name='MobilityManager';Path='\Microsoft\Windows\Ras'},
+        @{Name='Notifications';Path='\Microsoft\Windows\Location'},
+        @{Name='ProactiveScan';Path='\Microsoft\Windows\CHKDSK'},
+        @{Name='ProcessMemoryDiagnosticEvents';Path='\Microsoft\Windows\MemoryDiagnostic'},
+        @{Name='ProgramDataUpdater';Path='\Microsoft\Windows\Application Experience'},
+        @{Name='Proxy';Path='\Microsoft\Windows\Autochk'},
+        @{Name='QueueReporting';Path='\Microsoft\Windows\Windows Error Reporting'},
+        @{Name='RegIdleBackup';Path='\Microsoft\Windows\Registry'},
+        @{Name='ResolutionHost';Path='\Microsoft\Windows\WDI'},
+        @{Name='RunFullMemoryDiagnostic';Path='\Microsoft\Windows\MemoryDiagnostic'},
+        @{Name='Scheduled';Path='\Microsoft\Windows\Diagnosis'},
+        @{Name='ScheduledDefrag';Path='\Microsoft\Windows\Defrag'},
+        @{Name='ServerManager';Path='\Microsoft\Windows\Server Manager'},
+        @{Name='StartComponentCleanup';Path='\Microsoft\Windows\Servicing'},
+        @{Name='StartupAppTask';Path='\Microsoft\Windows\Application Experience'},
+        @{Name='TPM-Maintenance';Path='\Microsoft\Windows\TPM'},
+        @{Name='UninstallDeviceTask';Path='\Microsoft\Windows\Bluetooth'},
+        @{Name='UPnPHostConfig';Path='\Microsoft\Windows\UPnP'},
+        @{Name='UsbCeip';Path='\Microsoft\Windows\Customer Experience Improvement Program'},
+        @{Name='VerifyWinRE';Path='\Microsoft\Windows\RecoveryEnvironment'},
+        @{Name='Windows Defender Cache Maintenance';Path='\Microsoft\Windows\Windows Defender'},
+        @{Name='Windows Defender Cleanup';Path='\Microsoft\Windows\Windows Defender'},
+        @{Name='Windows Defender Scheduled Scan';Path='\Microsoft\Windows\Windows Defender'},
+        @{Name='Windows Defender Verification';Path='\Microsoft\Windows\Windows Defender'},
+        @{Name='UpdateLibrary';Path='\Microsoft\Windows\Windows Media Sharing'},
+        @{Name='WinSAT';Path='\Microsoft\Windows\Maintenance'},
+        @{Name='Recovery-Check';Path='\Microsoft\Windows\Workplace Join'}
+    )
+    foreach ($task in $scheduledTasks) {
+        ScheduledTask $($task.Name) {
+            TaskName = $task.Name
+            TaskPath = $task.Path
+            Enable   = $false
+            Ensure   = 'Absent'
+        }
+    }
 
-        # Services Section
-        Service 'AJRouter' {
-            Name        = 'AJRouter'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'ALG' {
-            Name        = 'ALG'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'BTAGService' {
-            Name        = 'BTAGService'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'bthserv' {
-            Name        = 'bthserv'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'DPS' {
-            Name        = 'DPS'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'WdiServiceHost' {
-            Name        = 'WdiServiceHost'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'WdiSystemHost' {
-            Name        = 'WdiSystemHost'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'MapsBroker' {
-            Name        = 'MapsBroker'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'EFS' {
-            Name        = 'EFS'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'fdPHost' {
-            Name        = 'fdPHost'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'FDResPub' {
-            Name        = 'FDResPub'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'SharedAccess' {
-            Name        = 'SharedAccess'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'CscService' {
-            Name        = 'CscService'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'CSC' {
-            Name        = 'CSC'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'SEMgrSvc' {
-            Name        = 'SEMgrSvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'SstpSvc' {
-            Name        = 'SstpSvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'SensrSvc' {
-            Name        = 'SensrSvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'shpamsvc' {
-            Name        = 'shpamsvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'SSDPSRV' {
-            Name        = 'SSDPSRV'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'upnphost' {
-            Name        = 'upnphost'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'WMPNetworkSvc' {
-            Name        = 'WMPNetworkSvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
-        Service 'icssvc' {
-            Name        = 'icssvc'
-            State       = 'Stopped'
-            StartupType = 'Disabled'
-        }
+    # Registry Settings Section
+    Registry 'DeleteUserAppContainersOnLogoff' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
+        Ensure      = 'Present'
+        ValueName   = 'DeleteUserAppContainersOnLogoff'
+        ValueType   = 'Dword'
+        ValueData   = 1
+    }
+    Registry 'EnableAutoLayout' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
+        Ensure      = 'Present'
+        ValueName   = 'EnableAutoLayout'
+        ValueType   = 'DWORD'
+        ValueData   = 0
+    }
+    Registry 'Enable' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
+        Ensure      = 'Present'
+        ValueName   = 'Enable'
+        ValueType   = 'String'
+        ValueData   = 'N'
+    }
+    Registry 'ScreenSaveActive' {
+        Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
+        Ensure      = 'Present'
+        ValueName   = 'ScreenSaveActive'
+        ValueType   = 'DWORD'
+        ValueData   = 0
+    }
+    Registry 'CrashDumpEnabled' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
+        Ensure      = 'Present'
+        ValueName   = 'CrashDumpEnabled'
+        ValueType   = 'DWORD'
+        ValueData   = 0
+    }
+    Registry 'NtfsDisableLastAccessUpdate' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
+        Ensure      = 'Present'
+        ValueName   = 'NtfsDisableLastAccessUpdate'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+    Registry 'ErrorMode' {
+        Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
+        Ensure      = 'Present'
+        ValueName   = 'ErrorMode'
+        ValueType   = 'DWORD'
+        ValueData   = 2
+    }
+    Registry 'TimeOutValue' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Disk'
+        Ensure      = 'Present'
+        ValueName   = 'TimeOutValue'
+        ValueType   = 'DWORD'
+        ValueData   = 0x000000C8
+    }
+    Registry 'NoAutoUpdate' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
+        Ensure      = 'Present'
+        ValueName   = 'NoAutoUpdate'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
 
+    # Windows Defender (disable if using 3rd party AV)
+    Registry 'DisableDefender' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender'
+        Ensure      = 'Present'
+        ValueName   = 'DisableAntiSpyware'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
 
-        # Scheduled Tasks Section
-        ScheduledTask 'AnalyzeSystem' {
-            TaskName            = 'AnalyzeSystem'
-            TaskPath            = '\Microsoft\Windows\Power Efficiency Diagnostics'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'BfeOnServiceStartTypeChange' {
-            TaskName            = 'BfeOnServiceStartTypeChange'
-            TaskPath            = '\Microsoft\Windows\Windows Filtering Platform'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Consolidator' {
-            TaskName            = 'Consolidator'
-            TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'CreateObjectTask' {
-            TaskName            = 'CreateObjectTask'
-            TaskPath            = '\Microsoft\Windows\CloudExperienceHost'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'IndexerAutomaticMaintenance' {
-            TaskName            = 'IndexerAutomaticMaintenance'
-            TaskPath            = '\Microsoft\Windows\Shell'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'MapsToastTask' {
-            TaskName            = 'MapsToastTask'
-            TaskPath            = '\Microsoft\Windows\Maps'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Microsoft Compatibility Appraiser' {
-            TaskName            = 'Microsoft Compatibility Appraiser'
-            TaskPath            = '\Microsoft\Windows\Application Experience'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Microsoft-Windows-DiskDiagnosticDataCollector' {
-            TaskName            = 'Microsoft-Windows-DiskDiagnosticDataCollector'
-            TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Microsoft-Windows-DiskDiagnosticResolver' {
-            TaskName            = 'Microsoft-Windows-DiskDiagnosticResolver'
-            TaskPath            = '\Microsoft\Windows\DiskDiagnostic'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'MNO Metadata Parser' {
-            TaskName            = 'MNO Metadata Parser'
-            TaskPath            = '\Microsoft\Windows\Mobile Broadband Accounts'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'MobilityManager' {
-            TaskName            = 'MobilityManager'
-            TaskPath            = '\Microsoft\Windows\Ras'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Notifications' {
-            TaskName            = 'Notifications'
-            TaskPath            = '\Microsoft\Windows\Location'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ProactiveScan' {
-            TaskName            = 'ProactiveScan'
-            TaskPath            = '\Microsoft\Windows\CHKDSK'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ProcessMemoryDiagnosticEvents' {
-            TaskName            = 'ProcessMemoryDiagnosticEvents'
-            TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ProgramDataUpdater' {
-            TaskName            = 'ProgramDataUpdater'
-            TaskPath            = '\Microsoft\Windows\Application Experience'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Proxy' {
-            TaskName            = 'Proxy'
-            TaskPath            = '\Microsoft\Windows\Autochk'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'QueueReporting' {
-            TaskName            = 'QueueReporting'
-            TaskPath            = '\Microsoft\Windows\Windows Error Reporting'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'RegIdleBackup' {
-            TaskName            = 'RegIdleBackup'
-            TaskPath            = '\Microsoft\Windows\Registry'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ResolutionHost' {
-            TaskName            = 'ResolutionHost'
-            TaskPath            = '\Microsoft\Windows\WDI'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'RunFullMemoryDiagnostic' {
-            TaskName            = 'RunFullMemoryDiagnostic'
-            TaskPath            = '\Microsoft\Windows\MemoryDiagnostic'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Scheduled' {
-            TaskName            = 'Scheduled'
-            TaskPath            = '\Microsoft\Windows\Diagnosis'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ScheduledDefrag' {
-            TaskName            = 'ScheduledDefrag'
-            TaskPath            = '\Microsoft\Windows\Defrag'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'ServerManager' {
-            TaskName            = 'ServerManager'
-            TaskPath            = '\Microsoft\Windows\Server Manager'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'StartComponentCleanup' {
-            TaskName            = 'StartComponentCleanup'
-            TaskPath            = '\Microsoft\Windows\Servicing'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'StartupAppTask' {
-            TaskName            = 'StartupAppTask'
-            TaskPath            = '\Microsoft\Windows\Application Experience'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'TPM-Maintenance' {
-            TaskName            = 'TPM-Maintenance'
-            TaskPath            = '\Microsoft\Windows\TPM'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'UninstallDeviceTask' {
-            TaskName            = 'UninstallDeviceTask'
-            TaskPath            = '\Microsoft\Windows\Bluetooth'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'UPnPHostConfig' {
-            TaskName            = 'UPnPHostConfig'
-            TaskPath            = '\Microsoft\Windows\UPnP'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'UsbCeip' {
-            TaskName            = 'UsbCeip'
-            TaskPath            = '\Microsoft\Windows\Customer Experience Improvement Program'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'VerifyWinRE' {
-            TaskName            = 'VerifyWinRE'
-            TaskPath            = '\Microsoft\Windows\RecoveryEnvironment'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Windows Defender Cache Maintenance' {
-            TaskName            = 'Windows Defender Cache Maintenance'
-            TaskPath            = '\Microsoft\Windows\Windows Defender'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Windows Defender Cleanup' {
-            TaskName            = 'Windows Defender Cleanup'
-            TaskPath            = '\Microsoft\Windows\Windows Defender'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Windows Defender Scheduled Scan' {
-            TaskName            = 'Windows Defender Scheduled Scan'
-            TaskPath            = '\Microsoft\Windows\Windows Defender'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Windows Defender Verification' {
-            TaskName            = 'Windows Defender Verification'
-            TaskPath            = '\Microsoft\Windows\Windows Defender'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'UpdateLibrary' {
-            TaskName            = 'UpdateLibrary'
-            TaskPath            = '\Microsoft\Windows\Windows Media Sharing'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'WinSAT' {
-            TaskName            = 'WinSAT'
-            TaskPath            = '\Microsoft\Windows\Maintenance'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
-        ScheduledTask 'Recovery-Check' {
-            TaskName            = 'Recovery-Check'
-            TaskPath            = '\Microsoft\Windows\Workplace Join'
-            Enable              = $false
-            Ensure              = 'Absent'
-        }
+    # Telemetry
+    Registry 'Telemetry' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection'
+        Ensure      = 'Present'
+        ValueName   = 'AllowTelemetry'
+        ValueType   = 'DWORD'
+        ValueData   = 0
+    }
 
+    # SMBv1 Disable
+    Registry 'SMBv1' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters'
+        Ensure      = 'Present'
+        ValueName   = 'SMB1'
+        ValueType   = 'DWORD'
+        ValueData   = 0
+    }
 
-        # Registry Settings Section
-        Registry 'DeleteUserAppContainersOnLogoff' {
-            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
-            Ensure      = 'Present'
-            ValueName   = 'DeleteUserAppContainersOnLogoff'
-            ValueType   = 'Dword'
-            ValueData   = 1
-        }
-        Registry 'EnableAutoLayout' {
-            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
-            Ensure      = 'Present'
-            ValueName   = 'EnableAutoLayout'
-            ValueType   = 'DWORD'
-            ValueData   = 0
-        }
-        Registry 'Enable' {
-            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
-            Ensure      = 'Present'
-            ValueName   = 'Enable'
-            ValueType   = 'String'
-            ValueData   = 'N'
-        }
-        Registry 'ScreenSaveActive' {
-            Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
-            Ensure      = 'Present'
-            ValueName   = 'ScreenSaveActive'
-            ValueType   = 'DWORD'
-            ValueData   = 0
-        }
-        Registry 'CrashDumpEnabled' {
-            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
-            Ensure      = 'Present'
-            ValueName   = 'CrashDumpEnabled'
-            ValueType   = 'DWORD'
-            ValueData   = 0
-        }
-        Registry 'NtfsDisableLastAccessUpdate' {
-            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
-            Ensure      = 'Present'
-            ValueName   = 'NtfsDisableLastAccessUpdate'
-            ValueType   = 'DWORD'
-            ValueData   = 1
-        }
-        Registry 'ErrorMode' {
-            Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
-            Ensure      = 'Present'
-            ValueName   = 'ErrorMode'
-            ValueType   = 'DWORD'
-            ValueData   = 2
-        }
-        Registry 'TimeOutValue' {
-            Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Disk'
-            Ensure      = 'Present'
-            ValueName   = 'TimeOutValue'
-            ValueType   = 'DWORD'
-            ValueData   = 0x000000C8
-        }
-        Registry 'NoAutoUpdate' {
-            Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
-            Ensure      = 'Present'
-            ValueName   = 'NoAutoUpdate'
-            ValueType   = 'DWORD'
-            ValueData   = 1
-        }
+    # Remote Desktop - Restrict access
+    Registry 'RDPTimeout' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server'
+        Ensure      = 'Present'
+        ValueName   = 'MaxIdleTime'
+        ValueType   = 'DWORD'
+        ValueData   = 1800000
+    }
 
+    # Power Plan - High Performance
+    Registry 'PowerPlan' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes'
+        Ensure      = 'Present'
+        ValueName   = 'ActivePowerScheme'
+        ValueType   = 'String'
+        ValueData   = '8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c' # High Performance GUID
+    }
 
+    # Event Log - Limit log size
+    Registry 'ApplicationLogMaxSize' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Application'
+        Ensure      = 'Present'
+        ValueName   = 'MaxSize'
+        ValueType   = 'DWORD'
+        ValueData   = 32768
+    }
+    Registry 'SystemLogMaxSize' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System'
+        Ensure      = 'Present'
+        ValueName   = 'MaxSize'
+        ValueType   = 'DWORD'
+        ValueData   = 32768
+    }
 
+    # Network - TCP/IP tuning
+    Registry 'TcpAutoTuning' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters'
+        Ensure      = 'Present'
+        ValueName   = 'EnableTCPA'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
 
-}
+    # Storage - Disable Storage Spaces Direct (if not used)
+    Registry 'DisableS2D' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\S2D'
+        Ensure      = 'Present'
+        ValueName   = 'Start'
+        ValueType   = 'DWORD'
+        ValueData   = 4
+    }
+
+    # Security - Harden LSA
+    Registry 'RunAsPPL' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa'
+        Ensure      = 'Present'
+        ValueName   = 'RunAsPPL'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+    # Security - Credential Guard
+    Registry 'EnableVirtualizationBasedSecurity' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard'
+        Ensure      = 'Present'
+        ValueName   = 'EnableVirtualizationBasedSecurity'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+    Registry 'RequirePlatformSecurityFeatures' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard'
+        Ensure      = 'Present'
+        ValueName   = 'RequirePlatformSecurityFeatures'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+    # Windows Server 2025: Enable SMB over QUIC (if using)
+    Registry 'EnableSMBOverQUIC' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters'
+        Ensure      = 'Present'
+        ValueName   = 'EnableSMBQUIC'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+
+    # Windows Server 2025: Enable Windows Defender Tamper Protection
+    Registry 'TamperProtection' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features'
+        Ensure      = 'Present'
+        ValueName   = 'TamperProtection'
+        ValueType   = 'DWORD'
+        ValueData   = 5
+    }
+
+    # Windows Server 2025: Enforce TLS 1.3 for Schannel
+    Registry 'TLS13Enabled' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Server'
+        Ensure      = 'Present'
+        ValueName   = 'Enabled'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+
+    # Windows Server 2025: Harden SMB signing
+    Registry 'RequireSecuritySignature' {
+        Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters'
+        Ensure      = 'Present'
+        ValueName   = 'RequireSecuritySignature'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+
+    # Windows Server 2025: Harden Remote Credential Guard
+    Registry 'RemoteCredentialGuard' {
+        Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation'
+        Ensure      = 'Present'
+        ValueName   = 'AllowProtectedCreds'
+        ValueType   = 'DWORD'
+        ValueData   = 1
+    }
+    # ...existing code...

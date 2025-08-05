@@ -1,161 +1,182 @@
 ﻿
 Configuration 'MSTF_SecurityBaseline_W10_Update_Baseline'
 {
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
 	Node 'MSTF_SecurityBaseline_W10_Update_Baseline'
 	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936\DCSettingIndex'
-         {
-              ValueName = 'DCSettingIndex'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936'
-         }
+        # Requires the system to be plugged in when waking timers are enabled (DC setting)
+        RegistryPolicyFile 'DCSettingIndex'
+        {
+            ValueName = 'DCSettingIndex'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936\ACSettingIndex'
-         {
-              ValueName = 'ACSettingIndex'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936'
-         }
+        # Requires the system to be plugged in when waking timers are enabled (AC setting)
+        RegistryPolicyFile 'ACSettingIndex'
+        {
+            ValueName = 'ACSettingIndex'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\5CA83367-6E45-459F-A27B-476B1D01C936'
+        }
 
-         RegistryPolicyFile 'DEL_\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364\DCSettingIndex'
-         {
-              ValueName = 'DCSettingIndex'
-              ValueData = ''
-              Ensure = 'Absent'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364'
-         }
+        # Removes power setting for enabling wake timers (DC setting)
+        RegistryPolicyFile 'DEL_DCSettingIndex_WakeTimers'
+        {
+            ValueName = 'DCSettingIndex'
+            ValueData = ''
+            Ensure = 'Absent'
+            ValueType = 'String'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364'
+        }
 
-         RegistryPolicyFile 'DEL_\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364\ACSettingIndex'
-         {
-              ValueName = 'ACSettingIndex'
-              ValueData = ''
-              Ensure = 'Absent'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364'
-         }
+        # Removes power setting for enabling wake timers (AC setting)
+        RegistryPolicyFile 'DEL_ACSettingIndex_WakeTimers'
+        {
+            ValueName = 'ACSettingIndex'
+            ValueData = ''
+            Ensure = 'Absent'
+            ValueType = 'String'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\9D7815A6-7EE4-497E-8888-515A05F02364'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab\DCSettingIndex'
-         {
-              ValueName = 'DCSettingIndex'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab'
-         }
+        # Enables sleep and hibernate settings (DC setting)
+        RegistryPolicyFile 'DCSettingIndex_Sleep'
+        {
+            ValueName = 'DCSettingIndex'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab\ACSettingIndex'
-         {
-              ValueName = 'ACSettingIndex'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab'
-         }
+        # Enables sleep and hibernate settings (AC setting)
+        RegistryPolicyFile 'ACSettingIndex_Sleep'
+        {
+            ValueName = 'ACSettingIndex'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\abfc2519-3608-4c2a-94ea-171b0ed546ab'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Power\PowerSettings\E69653CA-CF7F-4F05-AA73-CB833FA90AD4\DCSettingIndex'
-         {
-              ValueName = 'DCSettingIndex'
-              ValueData = 40
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\E69653CA-CF7F-4F05-AA73-CB833FA90AD4'
-         }
+        # Sets wake on LAN timeout to 40 seconds (DC setting)
+        RegistryPolicyFile 'DCSettingIndex_WakeOnLan'
+        {
+            ValueName = 'DCSettingIndex'
+            ValueData = 40
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Power\PowerSettings\E69653CA-CF7F-4F05-AA73-CB833FA90AD4'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DODownloadMode'
-         {
-              ValueName = 'DODownloadMode'
-              ValueData = 2
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Configures Delivery Optimization download mode to LAN only
+        RegistryPolicyFile 'DODownloadMode'
+        {
+            ValueName = 'DODownloadMode'
+            ValueData = 2
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DOMinFileSizeToCache'
-         {
-              ValueName = 'DOMinFileSizeToCache'
-              ValueData = 10
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Sets minimum file size to cache to 10MB
+        RegistryPolicyFile 'DOMinFileSizeToCache'
+        {
+            ValueName = 'DOMinFileSizeToCache'
+            ValueData = 10
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DOMinBatteryPercentageAllowedToUpload'
-         {
-              ValueName = 'DOMinBatteryPercentageAllowedToUpload'
-              ValueData = 60
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Sets minimum battery percentage required for upload to 60%
+        RegistryPolicyFile 'DOMinBatteryPercentageAllowedToUpload'
+        # Sets minimum battery percentage required for upload to 60%
+        RegistryPolicyFile 'DOMinBatteryPercentageAllowedToUpload'
+        {
+            ValueName = 'DOMinBatteryPercentageAllowedToUpload'
+            ValueData = 60
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DOMaxCacheAge'
-         {
-              ValueName = 'DOMaxCacheAge'
-              ValueData = 604800
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Sets maximum cache age to 7 days (604800 seconds)
+        RegistryPolicyFile 'DOMaxCacheAge'
+        {
+            ValueName = 'DOMaxCacheAge'
+            ValueData = 604800
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DODelayBackgroundDownloadFromHttp'
-         {
-              ValueName = 'DODelayBackgroundDownloadFromHttp'
-              ValueData = 300
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Sets delay for background downloads from HTTP to 5 minutes (300 seconds)
+        RegistryPolicyFile 'DODelayBackgroundDownloadFromHttp'
+        {
+            ValueName = 'DODelayBackgroundDownloadFromHttp'
+            ValueData = 300
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization\DODelayForegroundDownloadFromHttp'
-         {
-              ValueName = 'DODelayForegroundDownloadFromHttp'
-              ValueData = 60
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
-         }
+        # Sets delay for foreground downloads from HTTP to 1 minute (60 seconds)
+        RegistryPolicyFile 'DODelayForegroundDownloadFromHttp'
+        {
+            ValueName = 'DODelayForegroundDownloadFromHttp'
+            ValueData = 60
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\DeliveryOptimization'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\SetDisablePauseUXAccess'
-         {
-              ValueName = 'SetDisablePauseUXAccess'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
-         }
+        # Disables access to pause update functionality in Settings UI
+        RegistryPolicyFile 'SetDisablePauseUXAccess'
+        # Disables access to pause update functionality in Settings UI
+        RegistryPolicyFile 'SetDisablePauseUXAccess'
+        {
+            ValueName = 'SetDisablePauseUXAccess'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\SetUpdateNotificationLevel'
-         {
-              ValueName = 'SetUpdateNotificationLevel'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
-         }
+        # Configures Windows Update notification level settings
+        RegistryPolicyFile 'SetUpdateNotificationLevel'
+        {
+            ValueName = 'SetUpdateNotificationLevel'
+            ValueData = 1
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\UpdateNotificationLevel'
-         {
-              ValueName = 'UpdateNotificationLevel'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
-         }
+        # Sets update notification level to disabled
+        RegistryPolicyFile 'UpdateNotificationLevel'
+        {
+            ValueName = 'UpdateNotificationLevel'
+            ValueData = 0
+            ValueType = 'Dword'
+            TargetType = 'ComputerConfiguration'
+            Key = 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate'
+        }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\DoNotConnectToWindowsUpdateInternetLocations'
-         {
+        # Allows connections to Windows Update internet locations
+        RegistryPolicyFile 'DoNotConnectToWindowsUpdateInternetLocations'
+        {
               ValueName = 'DoNotConnectToWindowsUpdateInternetLocations'
               ValueData = 0
               ValueType = 'Dword'

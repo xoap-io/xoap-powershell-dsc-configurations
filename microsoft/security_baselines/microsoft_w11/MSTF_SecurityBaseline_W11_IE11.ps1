@@ -1,132 +1,146 @@
 ﻿
 Configuration 'MSTF_SecurityBaseline_W11_IE11'
 {
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
+     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+     Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
+     Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+     Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node 'MSTF_SecurityBaseline_W11_IE11'
-	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext\RunThisTimeEnabled'
+     Node 'MSTF_SecurityBaseline_W11_IE11'
+     {
+         # Disables 'Run This Time' for unsigned ActiveX controls
+         RegistryPolicyFile 'RunThisTimeEnabled'
          {
-              ValueName = 'RunThisTimeEnabled'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
+             ValueName = 'RunThisTimeEnabled'
+             ValueData = 0
+             ValueType = 'Dword'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext\VersionCheckEnabled'
+         # Enables version checking for ActiveX controls
+         RegistryPolicyFile 'VersionCheckEnabled'
          {
-              ValueName = 'VersionCheckEnabled'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
+             ValueName = 'VersionCheckEnabled'
+             ValueData = 1
+             ValueType = 'Dword'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Download\RunInvalidSignatures'
+         # Prevents running downloads with invalid signatures
+         RegistryPolicyFile 'RunInvalidSignatures'
          {
-              ValueName = 'RunInvalidSignatures'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
+             ValueName = 'RunInvalidSignatures'
+             ValueData = 0
+             ValueType = 'Dword'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Download\CheckExeSignatures'
+         # Requires checking executable signatures on download
+         RegistryPolicyFile 'CheckExeSignatures'
          {
-              ValueName = 'CheckExeSignatures'
-              ValueData = 'yes'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
+             ValueName = 'CheckExeSignatures'
+             ValueData = 'yes'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\Isolation64Bit'
+         # Enables 64-bit tab isolation for IE
+         RegistryPolicyFile 'Isolation64Bit'
          {
-              ValueName = 'Isolation64Bit'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
+             ValueName = 'Isolation64Bit'
+             ValueData = 1
+             ValueType = 'Dword'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\DisableEPMCompat'
+         # Disables Enhanced Protected Mode compatibility
+         RegistryPolicyFile 'DisableEPMCompat'
          {
-              ValueName = 'DisableEPMCompat'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
+             ValueName = 'DisableEPMCompat'
+             ValueData = 1
+             ValueType = 'Dword'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\Isolation'
+         # Sets isolation mode for IE tabs
+         RegistryPolicyFile 'Isolation'
          {
-              ValueName = 'Isolation'
-              ValueData = 'PMEM'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
+             ValueName = 'Isolation'
+             ValueData = 'PMEM'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\(Reserved)'
+         # Disables MK protocol for reserved processes
+         RegistryPolicyFile '(Reserved)_FEATURE_DISABLE_MK_PROTOCOL'
          {
-              ValueName = '(Reserved)'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
+             ValueName = '(Reserved)'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\iexplore.exe'
+         # Disables MK protocol for IE
+         RegistryPolicyFile 'iexplore.exe_FEATURE_DISABLE_MK_PROTOCOL'
          {
-              ValueName = 'iexplore.exe'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
+             ValueName = 'iexplore.exe'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\explorer.exe'
+         # Disables MK protocol for Windows Explorer
+         RegistryPolicyFile 'explorer.exe_FEATURE_DISABLE_MK_PROTOCOL'
          {
-              ValueName = 'explorer.exe'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
+             ValueName = 'explorer.exe'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\explorer.exe'
+         # Enables strict MIME handling for Windows Explorer
+         RegistryPolicyFile 'explorer.exe_FEATURE_MIME_HANDLING'
          {
-              ValueName = 'explorer.exe'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
+             ValueName = 'explorer.exe'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\iexplore.exe'
+         # Enables strict MIME handling for IE
+         RegistryPolicyFile 'iexplore.exe_FEATURE_MIME_HANDLING'
          {
-              ValueName = 'iexplore.exe'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
+             ValueName = 'iexplore.exe'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\(Reserved)'
+         # Enables strict MIME handling for reserved processes
+         RegistryPolicyFile '(Reserved)_FEATURE_MIME_HANDLING'
          {
-              ValueName = '(Reserved)'
-              ValueData = '1'
-              ValueType = 'String'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
+             ValueName = '(Reserved)'
+             ValueData = '1'
+             ValueType = 'String'
+             TargetType = 'ComputerConfiguration'
+             Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\explorer.exe'
          {
+            # Disables MIME sniffing for Windows Explorer
               ValueName = 'explorer.exe'
               ValueData = '1'
               ValueType = 'String'
@@ -136,6 +150,7 @@ Configuration 'MSTF_SecurityBaseline_W11_IE11'
 
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\iexplore.exe'
          {
+            # Disables MIME sniffing for IE
               ValueName = 'iexplore.exe'
               ValueData = '1'
               ValueType = 'String'
@@ -145,6 +160,7 @@ Configuration 'MSTF_SecurityBaseline_W11_IE11'
 
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\(Reserved)'
          {
+            # Disables MIME sniffing for reserved processes
               ValueName = '(Reserved)'
               ValueData = '1'
               ValueType = 'String'

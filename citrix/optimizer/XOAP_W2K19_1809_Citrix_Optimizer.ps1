@@ -372,6 +372,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         Ensure              = 'Absent'
         }
 
+        # Ensures user app containers are deleted on logoff for improved security
         Registry 'DeleteUserAppContainersOnLogoff'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
@@ -381,6 +382,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '1'
         }
 
+        # Disables automatic layout adjustments for desktop icons
         Registry 'EnableAutoLayout'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
@@ -390,6 +392,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '0'
         }
 
+        # Disables boot optimization to reduce unnecessary disk activity
         Registry 'Enable'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
@@ -399,6 +402,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = 'N'
         }
 
+        # Disables screensaver for the default user profile
         Registry 'ScreenSaveActive'
         {
         Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
@@ -408,6 +412,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '0'
         }
 
+        # Disables crash dump creation to save disk space
         Registry 'CrashDumpEnabled'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
@@ -417,6 +422,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '0'
         }
 
+        # Disables NTFS last access update to improve disk performance
         Registry 'NtfsDisableLastAccessUpdate'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
@@ -426,6 +432,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '1'
         }
 
+        # Sets error mode to suppress system error dialogs
         Registry 'ErrorMode'
         {
         Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
@@ -435,6 +442,7 @@ Configuration 'XOAP_W2K19_1809_Citrix_Optimizer'
         ValueData   = '2'
         }
 
+        # Disables automatic Windows Updates for better control in Citrix environments
         Registry 'NoAutoUpdate'
         {
         Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'

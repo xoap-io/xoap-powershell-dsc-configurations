@@ -936,6 +936,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'DeleteUserAppContainersOnLogoff'
+        # Ensures user app containers are deleted on logoff for improved security
         {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy'
             Ensure      = 'Present'
@@ -945,6 +946,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'EnableAutoLayout'
+        # Disables automatic layout adjustments for desktop icons
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
             Ensure      = 'Present'
@@ -954,6 +956,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'Enable'
+        # Disables boot optimization to reduce unnecessary disk activity
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
             Ensure      = 'Present'
@@ -963,6 +966,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'ScreenSaveActive'
+        # Disables screensaver for the default user profile
         {
             Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
             Ensure      = 'Present'
@@ -972,6 +976,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'HibernateEnabled'
+        # Disables hibernation to save disk space and improve performance
         {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power'
             Ensure      = 'Present'
@@ -981,6 +986,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'CrashDumpEnabled'
+        # Disables crash dump creation to save disk space
         {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
             Ensure      = 'Present'
@@ -990,6 +996,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'AllowStorageSenseGlobal'
+        # Disables Storage Sense globally
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\StorageSense'
             Ensure      = 'Present'
@@ -999,6 +1006,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'EnableFirstLogonAnimation'
+        # Disables first logon animation for faster login experience
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
             Ensure      = 'Present'
@@ -1008,6 +1016,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'ErrorMode'
+        # Sets error mode to suppress system error dialogs
         {
             Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
             Ensure      = 'Present'
@@ -1017,6 +1026,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'AllowCortana'
+        # Disables Cortana for privacy and performance
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search'
             Ensure      = 'Present'
@@ -1026,6 +1036,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'NoAutoUpdate'
+        # Disables automatic Windows Updates for better control
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
             Ensure      = 'Present'
@@ -1035,6 +1046,7 @@ Configuration 'XOAP_W11_2009_Citrix_Optimizer'
         }
 
         Registry 'CEIPEnable'
+        # Disables Customer Experience Improvement Program (CEIP)
         {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows'
             Ensure      = 'Present'

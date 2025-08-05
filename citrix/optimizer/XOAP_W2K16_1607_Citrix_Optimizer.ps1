@@ -395,6 +395,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         }
 
         ScheduledTask 'ServerManager'
+        # Ensures user app containers are deleted on logoff for improved security
         {
         TaskName            = 'ServerManager'
         TaskPath            = '\Microsoft\Windows\Server Manager'
@@ -404,6 +405,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
 
         ScheduledTask 'SmartScreenSpecific'
         {
+        # Disables automatic layout adjustments for desktop icons
         TaskName            = 'SmartScreenSpecific'
         TaskPath            = '\Microsoft\Windows\AppID'
         Enable              = $false
@@ -413,6 +415,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         ScheduledTask 'StartComponentCleanup'
         {
         TaskName            = 'StartComponentCleanup'
+        # Disables boot optimization to reduce unnecessary disk activity
         TaskPath            = '\Microsoft\Windows\Servicing'
         Enable              = $false
         Ensure              = 'Absent'
@@ -422,6 +425,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         {
         TaskName            = 'StartupAppTask'
         TaskPath            = '\Microsoft\Windows\Application Experience'
+        # Disables screensaver for the default user profile
         Enable              = $false
         Ensure              = 'Absent'
         }
@@ -431,6 +435,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         TaskName            = 'TPM-Maintenance'
         TaskPath            = '\Microsoft\Windows\TPM'
         Enable              = $false
+        # Disables crash dump creation to save disk space
         Ensure              = 'Absent'
         }
 
@@ -440,6 +445,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         TaskPath            = '\Microsoft\Windows\Bluetooth'
         Enable              = $false
         Ensure              = 'Absent'
+        # Disables NTFS last access update to improve disk performance
         }
 
         ScheduledTask 'UPnPHostConfig'
@@ -449,6 +455,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         Enable              = $false
         Ensure              = 'Absent'
         }
+        # Sets error mode to suppress system error dialogs
 
         ScheduledTask 'UsbCeip'
         {
@@ -458,6 +465,7 @@ Configuration 'XOAP_W2K16_1607_Citrix_Optimizer'
         Ensure              = 'Absent'
         }
 
+        # Disables automatic Windows Updates for better control in Citrix environments
         ScheduledTask 'VerifyWinRE'
         {
         TaskName            = 'VerifyWinRE'
