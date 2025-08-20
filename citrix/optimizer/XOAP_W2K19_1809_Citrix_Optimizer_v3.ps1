@@ -2,28 +2,32 @@
 # This configuration uses the new DSC v3 syntax and best practices for maintainability and clarity.
 # All registry resources include comments explaining their purpose.
 
-Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
+Configuration 'XOAP_W2K19_1809_Citrix_Optimizer_v3'
+{
     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '9.0.0'
+    Import-DscResource -ModuleName 'ComputerManagementDsc' -ModuleVersion '10.0.0'
     Import-DscResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
     Import-DscResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-    Node localhost {
-        File XOAP_Folder {
-            Type = 'Directory'
-            Ensure = 'Present'
-            DestinationPath = 'C:\XOAP'
-        }
-
+    Node 'XOAP_W2K19_1809_Citrix_Optimizer_v3' 
+    {
         # Disable unnecessary services for Citrix optimization
         foreach ($svc in @(
-            'DPS','WdiServiceHost','WdiSystemHost','EFS','SharedAccess','SstpSvc','SysMain','WerSvc')) {
+            'DPS',
+            'WdiServiceHost',
+            'WdiSystemHost',
+            'EFS',
+            'SharedAccess',
+            'SstpSvc',
+            'SysMain',
+            'WerSvc')) {
             Service $svc {
                 Name        = $svc
                 State       = 'stopped'
                 StartupType = 'Disabled'
             }
         }
+
         Service defragsvc {
             Name        = 'defragsvc'
             State       = 'stopped'
@@ -88,6 +92,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'Dword'
             ValueData   = '1'
         }
+
         # Disables automatic layout adjustments for desktop icons
         Registry EnableAutoLayout {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout'
@@ -96,6 +101,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'DWORD'
             ValueData   = '0'
         }
+
         # Disables boot optimization to reduce unnecessary disk activity
         Registry Enable {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction'
@@ -104,6 +110,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'String'
             ValueData   = 'N'
         }
+
         # Disables screensaver for the default user profile
         Registry ScreenSaveActive {
             Key         = 'HKEY_USERS\.DEFAULT\Control Panel\Desktop'
@@ -112,6 +119,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'DWORD'
             ValueData   = '0'
         }
+
         # Disables crash dump creation to save disk space
         Registry CrashDumpEnabled {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl'
@@ -120,6 +128,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'DWORD'
             ValueData   = '0'
         }
+
         # Disables NTFS last access update to improve disk performance
         Registry NtfsDisableLastAccessUpdate {
             Key         = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem'
@@ -128,6 +137,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'DWORD'
             ValueData   = '1'
         }
+
         # Sets error mode to suppress system error dialogs
         Registry ErrorMode {
             Key         = 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows'
@@ -136,6 +146,7 @@ Configuration XOAP_W2K19_1809_Citrix_Optimizer_v3 {
             ValueType   = 'DWORD'
             ValueData   = '2'
         }
+        
         # Disables automatic Windows Updates for better control in Citrix environments
         Registry NoAutoUpdate {
             Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'

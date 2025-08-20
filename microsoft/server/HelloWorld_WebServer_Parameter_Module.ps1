@@ -13,7 +13,7 @@ Configuration 'HelloWorld_WebServer_Parameter_Module'
         {
             Ensure          = "Present"
             DestinationPath = "C:\temp\HelloWorld.txt"
-            Contents        = "Hello World!$TestParameter"
+            Contents        = "Hello World!"
         }
 
         # Installs IIS Web-Server feature
