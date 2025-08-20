@@ -8,45 +8,50 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_Credential_Guard'
 
 	Node 'MSTF_SecurityBaseline_W10_1607_Credential_Guard'
 	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity'
-         {
-              ValueName = 'EnableVirtualizationBasedSecurity'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
-         }
+          # Enable Virtualization Based Security
+          RegistryPolicyFile 'EnableVirtualizationBasedSecurity'
+          {
+               ValueName = 'EnableVirtualizationBasedSecurity'
+               ValueData = 1
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\RequirePlatformSecurityFeatures'
-         {
-              ValueName = 'RequirePlatformSecurityFeatures'
-              ValueData = 3
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
-         }
+          # Require Platform Security Features
+          RegistryPolicyFile 'RequirePlatformSecurityFeatures'
+          {
+               ValueName = 'RequirePlatformSecurityFeatures'
+               ValueData = 3
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\HypervisorEnforcedCodeIntegrity'
-         {
-              ValueName = 'HypervisorEnforcedCodeIntegrity'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
-         }
+          # Enable Hypervisor Enforced Code Integrity
+          RegistryPolicyFile 'HypervisorEnforcedCodeIntegrity'
+          {
+               ValueName = 'HypervisorEnforcedCodeIntegrity'
+               ValueData = 1
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\LsaCfgFlags'
-         {
-              ValueName = 'LsaCfgFlags'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
-         }
+          # Configure LSA Configuration Flags
+          RegistryPolicyFile 'LsaCfgFlags'
+          {
+               ValueName = 'LsaCfgFlags'
+               ValueData = 1
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
+          }
 
-         RefreshRegistryPolicy 'ActivateClientSideExtension'
-         {
-             IsSingleInstance = 'Yes'
-         }
+          # Refresh registry policy to apply changes
+          RefreshRegistryPolicy 'ActivateClientSideExtension'
+          {
+               IsSingleInstance = 'Yes'
+          }
      }
 }
