@@ -1,14 +1,15 @@
 ﻿
 Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
 {
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
 	Node 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
 	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDriveTypeAutoRun'
+         # Disable AutoRun for all drives
+         RegistryPolicyFile 'NoDriveTypeAutoRun'
          {
               ValueName = 'NoDriveTypeAutoRun'
               ValueData = 255
@@ -17,7 +18,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoAutorun'
+         # Disable AutoRun globally
+         RegistryPolicyFile 'NoAutorun'
          {
               ValueName = 'NoAutorun'
               ValueData = 1
@@ -26,7 +28,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableAutomaticRestartSignOn'
+         # Disable automatic restart sign-on
+         RegistryPolicyFile 'DisableAutomaticRestartSignOn'
          {
               ValueName = 'DisableAutomaticRestartSignOn'
               ValueData = 1
@@ -35,7 +38,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Biometrics\FacialFeatures\EnhancedAntiSpoofing'
+         # Enable enhanced anti-spoofing for facial features
+         RegistryPolicyFile 'EnhancedAntiSpoofing'
          {
               ValueName = 'EnhancedAntiSpoofing'
               ValueData = 1
@@ -44,7 +48,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Biometrics\FacialFeatures'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\EventLog\Application\MaxSize'
+         # Set maximum size for Application event log
+         RegistryPolicyFile 'MaxSize'
          {
               ValueName = 'MaxSize'
               ValueData = 32768
@@ -53,7 +58,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\EventLog\Application'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\EventLog\Security\MaxSize'
+         # Set maximum size for Security event log
+         RegistryPolicyFile 'MaxSize'
          {
               ValueName = 'MaxSize'
               ValueData = 196608
@@ -62,7 +68,8 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\EventLog\Security'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\EventLog\System\MaxSize'
+         # Set maximum size for System event log
+         RegistryPolicyFile 'MaxSize'
          {
               ValueName = 'MaxSize'
               ValueData = 32768
@@ -71,7 +78,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\EventLog\System'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Explorer\NoAutoplayfornonVolume'
+         RegistryPolicyFile 'NoAutoplayfornonVolume'
          {
               ValueName = 'NoAutoplayfornonVolume'
               ValueData = 1
@@ -80,7 +87,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Explorer\NoDataExecutionPrevention'
+         RegistryPolicyFile 'NoDataExecutionPrevention'
          {
               ValueName = 'NoDataExecutionPrevention'
               ValueData = 0
@@ -89,7 +96,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Explorer\NoHeapTerminationOnCorruption'
+         RegistryPolicyFile 'NoHeapTerminationOnCorruption'
          {
               ValueName = 'NoHeapTerminationOnCorruption'
               ValueData = 0
@@ -98,7 +105,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Explorer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}\NoBackgroundPolicy'
+         RegistryPolicyFile 'NoBackgroundPolicy'
          {
               ValueName = 'NoBackgroundPolicy'
               ValueData = 0
@@ -107,7 +114,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}\NoGPOListChanges'
+         RegistryPolicyFile 'NoGPOListChanges'
          {
               ValueName = 'NoGPOListChanges'
               ValueData = 0
@@ -116,7 +123,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Installer\AlwaysInstallElevated'
+         RegistryPolicyFile 'AlwaysInstallElevated'
          {
               ValueName = 'AlwaysInstallElevated'
               ValueData = 0
@@ -125,7 +132,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Installer\EnableUserControl'
+         RegistryPolicyFile 'EnableUserControl'
          {
               ValueName = 'EnableUserControl'
               ValueData = 0
@@ -134,7 +141,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Installer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\LanmanWorkstation\AllowInsecureGuestAuth'
+         RegistryPolicyFile 'AllowInsecureGuestAuth'
          {
               ValueName = 'AllowInsecureGuestAuth'
               ValueData = 0
@@ -143,7 +150,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\LanmanWorkstation'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths\\*\NETLOGON'
+         RegistryPolicyFile 'NETLOGON'
          {
               ValueName = '\\*\NETLOGON'
               ValueData = 'RequireMutualAuthentication=1,RequireIntegrity=1'
@@ -152,7 +159,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths\\*\SYSVOL'
+         RegistryPolicyFile 'SYSVOL'
          {
               ValueName = '\\*\SYSVOL'
               ValueData = 'RequireMutualAuthentication=1,RequireIntegrity=1'
@@ -161,7 +168,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Personalization\NoLockScreenCamera'
+         RegistryPolicyFile 'NoLockScreenCamera'
          {
               ValueName = 'NoLockScreenCamera'
               ValueData = 1
@@ -170,7 +177,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Personalization\NoLockScreenSlideshow'
+         RegistryPolicyFile 'NoLockScreenSlideshow'
          {
               ValueName = 'NoLockScreenSlideshow'
               ValueData = 1
@@ -179,7 +186,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Personalization'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging\EnableScriptBlockLogging'
+         RegistryPolicyFile 'EnableScriptBlockLogging'
          {
               ValueName = 'EnableScriptBlockLogging'
               ValueData = 1
@@ -204,14 +211,14 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
           	If you believe ' ' is the correct value for this string, you may change it here.
          #>
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Safer\'
+         RegistryPolicyFile ''
          {
               ValueName = ''
               TargetType = 'ComputerConfiguration'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Safer'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Appx\EnforcementMode'
+         RegistryPolicyFile 'EnforcementMode'
          {
               ValueName = 'EnforcementMode'
               ValueData = 1
@@ -220,7 +227,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Appx'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Appx\a9e18c21-ff8f-43cf-b9fc-db40eed693ba\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePublisherRule Id="a9e18c21-ff8f-43cf-b9fc-db40eed693ba" Name="(Default Rule) All signed packaged apps" Description="Allows members of the Everyone group to run packaged apps that are signed." UserOrGroupSid="S-1-1-0" Action="Allow"><Conditions><FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*"><BinaryVersionRange LowSection="0.0.0.0" HighSection="*"/></FilePublisherCondition></Conditions></FilePublisherRule>
@@ -236,14 +243,14 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
           	If you believe ' ' is the correct value for this string, you may change it here.
          #>
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Dll\'
+         RegistryPolicyFile ''
          {
               ValueName = ''
               TargetType = 'ComputerConfiguration'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Dll'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\EnforcementMode'
+         RegistryPolicyFile 'EnforcementMode'
          {
               ValueName = 'EnforcementMode'
               ValueData = 1
@@ -252,7 +259,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\5e3ec135-b5af-4961-ae4d-cde98710afc9\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePublisherRule Id="5e3ec135-b5af-4961-ae4d-cde98710afc9" Name="Block Google Chrome" Description="" UserOrGroupSid="S-1-1-0" Action="Deny"><Conditions><FilePublisherCondition PublisherName="O=GOOGLE INC, L=MOUNTAIN VIEW, S=CALIFORNIA, C=US" ProductName="GOOGLE CHROME" BinaryName="CHROME.EXE"><BinaryVersionRange LowSection="*" HighSection="*"/></FilePublisherCondition></Conditions></FilePublisherRule>
@@ -262,7 +269,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\5e3ec135-b5af-4961-ae4d-cde98710afc9'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\6db6c8f3-cf7c-4754-a438-94c95345bb53\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePublisherRule Id="6db6c8f3-cf7c-4754-a438-94c95345bb53" Name="Block Mozilla Firefox" Description="" UserOrGroupSid="S-1-1-0" Action="Deny"><Conditions><FilePublisherCondition PublisherName="O=MOZILLA CORPORATION, L=MOUNTAIN VIEW, S=CA, C=US" ProductName="FIREFOX" BinaryName="FIREFOX.EXE"><BinaryVersionRange LowSection="*" HighSection="*"/></FilePublisherCondition></Conditions></FilePublisherRule>
@@ -272,7 +279,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\6db6c8f3-cf7c-4754-a438-94c95345bb53'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\881d54fe-3848-4d6a-95fd-42d48ebe60b8\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePublisherRule Id="881d54fe-3848-4d6a-95fd-42d48ebe60b8" Name="Block Internet Explorer" Description="" UserOrGroupSid="S-1-1-0" Action="Deny"><Conditions><FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="IEXPLORE.EXE"><BinaryVersionRange LowSection="*" HighSection="*"/></FilePublisherCondition></Conditions></FilePublisherRule>
@@ -282,7 +289,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\881d54fe-3848-4d6a-95fd-42d48ebe60b8'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\921cc481-6e17-4653-8f75-050b80acca20\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePathRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="(Default Rule) All files located in the Program Files folder" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow"><Conditions><FilePathCondition Path="%PROGRAMFILES%\*"/></Conditions></FilePathRule>
@@ -292,7 +299,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\921cc481-6e17-4653-8f75-050b80acca20'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\a61c8b2c-a319-4cd0-9690-d2177cad7b51\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="(Default Rule) All files located in the Windows folder" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow"><Conditions><FilePathCondition Path="%WINDIR%\*"/></Conditions></FilePathRule>
@@ -302,7 +309,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\a61c8b2c-a319-4cd0-9690-d2177cad7b51'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Exe\fd686d83-a829-4351-8ff4-27c7de5755d2\Value'
+         RegistryPolicyFile 'Value'
          {
               ValueName = 'Value'
               ValueData = '<FilePathRule Id="fd686d83-a829-4351-8ff4-27c7de5755d2" Name="(Default Rule) All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow"><Conditions><FilePathCondition Path="*"/></Conditions></FilePathRule>
@@ -318,7 +325,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
           	If you believe ' ' is the correct value for this string, you may change it here.
          #>
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Msi\'
+         RegistryPolicyFile ''
          {
               ValueName = ''
               TargetType = 'ComputerConfiguration'
@@ -331,14 +338,14 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
           	If you believe ' ' is the correct value for this string, you may change it here.
          #>
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Script\'
+         RegistryPolicyFile ''
          {
               ValueName = ''
               TargetType = 'ComputerConfiguration'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\SrpV2\Script'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\System\DontDisplayNetworkSelectionUI'
+         RegistryPolicyFile 'DontDisplayNetworkSelectionUI'
          {
               ValueName = 'DontDisplayNetworkSelectionUI'
               ValueData = 1
@@ -347,7 +354,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\System'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\System\EnableSmartScreen'
+         RegistryPolicyFile 'EnableSmartScreen'
          {
               ValueName = 'EnableSmartScreen'
               ValueData = 1
@@ -356,7 +363,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\System'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\Windows Search\AllowIndexingEncryptedStoresOrItems'
+         RegistryPolicyFile 'AllowIndexingEncryptedStoresOrItems'
          {
               ValueName = 'AllowIndexingEncryptedStoresOrItems'
               ValueData = 0
@@ -365,7 +372,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\Windows Search'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client\AllowBasic'
+         RegistryPolicyFile 'AllowBasic'
          {
               ValueName = 'AllowBasic'
               ValueData = 0
@@ -374,7 +381,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client\AllowUnencryptedTraffic'
+         RegistryPolicyFile 'AllowUnencryptedTraffic'
          {
               ValueName = 'AllowUnencryptedTraffic'
               ValueData = 0
@@ -383,7 +390,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client\AllowDigest'
+         RegistryPolicyFile 'AllowDigest'
          {
               ValueName = 'AllowDigest'
               ValueData = 0
@@ -392,7 +399,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Client'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service\AllowBasic'
+         RegistryPolicyFile 'AllowBasic'
          {
               ValueName = 'AllowBasic'
               ValueData = 0
@@ -401,7 +408,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service\AllowUnencryptedTraffic'
+         RegistryPolicyFile 'AllowUnencryptedTraffic'
          {
               ValueName = 'AllowUnencryptedTraffic'
               ValueData = 0
@@ -410,7 +417,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service\DisableRunAs'
+         RegistryPolicyFile 'DisableRunAs'
          {
               ValueName = 'DisableRunAs'
               ValueData = 1
@@ -419,7 +426,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\WinRM\Service'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\MitigationOptions\MitigationOptions_FontBocking'
+         RegistryPolicyFile 'MitigationOptions_FontBocking'
          {
               ValueName = 'MitigationOptions_FontBocking'
               ValueData = '1000000000000'
@@ -428,7 +435,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\MitigationOptions'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\DisablePasswordSaving'
+         RegistryPolicyFile 'DisablePasswordSaving'
          {
               ValueName = 'DisablePasswordSaving'
               ValueData = 1
@@ -437,7 +444,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\fDisableCdm'
+         RegistryPolicyFile 'fDisableCdm'
          {
               ValueName = 'fDisableCdm'
               ValueData = 1
@@ -446,7 +453,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\fPromptForPassword'
+         RegistryPolicyFile 'fPromptForPassword'
          {
               ValueName = 'fPromptForPassword'
               ValueData = 1
@@ -455,7 +462,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\fEncryptRPCTraffic'
+         RegistryPolicyFile 'fEncryptRPCTraffic'
          {
               ValueName = 'fEncryptRPCTraffic'
               ValueData = 1
@@ -464,7 +471,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\MinEncryptionLevel'
+         RegistryPolicyFile 'MinEncryptionLevel'
          {
               ValueName = 'MinEncryptionLevel'
               ValueData = 3
@@ -473,7 +480,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PolicyVersion'
+         RegistryPolicyFile 'PolicyVersion'
          {
               ValueName = 'PolicyVersion'
               ValueData = 538
@@ -482,7 +489,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile\DefaultOutboundAction'
+         RegistryPolicyFile 'DefaultOutboundAction'
          {
               ValueName = 'DefaultOutboundAction'
               ValueData = 0
@@ -491,7 +498,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile\DefaultInboundAction'
+         RegistryPolicyFile 'DefaultInboundAction'
          {
               ValueName = 'DefaultInboundAction'
               ValueData = 1
@@ -500,7 +507,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile\EnableFirewall'
+         RegistryPolicyFile 'EnableFirewall'
          {
               ValueName = 'EnableFirewall'
               ValueData = 1
@@ -509,7 +516,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile\EnableFirewall'
+         RegistryPolicyFile 'EnableFirewall'
          {
               ValueName = 'EnableFirewall'
               ValueData = 1
@@ -518,7 +525,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile\DefaultInboundAction'
+         RegistryPolicyFile 'DefaultInboundAction'
          {
               ValueName = 'DefaultInboundAction'
               ValueData = 1
@@ -527,7 +534,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile\DefaultOutboundAction'
+         RegistryPolicyFile 'DefaultOutboundAction'
          {
               ValueName = 'DefaultOutboundAction'
               ValueData = 0
@@ -536,7 +543,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PrivateProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile\EnableFirewall'
+         RegistryPolicyFile 'EnableFirewall'
          {
               ValueName = 'EnableFirewall'
               ValueData = 1
@@ -545,7 +552,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile\DefaultOutboundAction'
+         RegistryPolicyFile 'DefaultOutboundAction'
          {
               ValueName = 'DefaultOutboundAction'
               ValueData = 0
@@ -554,7 +561,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile\DefaultInboundAction'
+         RegistryPolicyFile 'DefaultInboundAction'
          {
               ValueName = 'DefaultInboundAction'
               ValueData = 1
@@ -563,7 +570,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\Software\Policies\Microsoft\WindowsFirewall\PublicProfile'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest\UseLogonCredential'
+         RegistryPolicyFile 'UseLogonCredential'
          {
               ValueName = 'UseLogonCredential'
               ValueData = 0
@@ -572,7 +579,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Policies\EarlyLaunch\DriverLoadPolicy'
+         RegistryPolicyFile 'DriverLoadPolicy'
          {
               ValueName = 'DriverLoadPolicy'
               ValueData = 3
@@ -581,7 +588,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\SYSTEM\CurrentControlSet\Policies\EarlyLaunch'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Services\Netbt\Parameters\NoNameReleaseOnDemand'
+         RegistryPolicyFile 'NoNameReleaseOnDemand'
          {
               ValueName = 'NoNameReleaseOnDemand'
               ValueData = 1
@@ -590,7 +597,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\SYSTEM\CurrentControlSet\Services\Netbt\Parameters'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\EnableICMPRedirect'
+         RegistryPolicyFile 'EnableICMPRedirect'
          {
               ValueName = 'EnableICMPRedirect'
               ValueData = 0
@@ -599,7 +606,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\DisableIPSourceRouting'
+         RegistryPolicyFile 'DisableIPSourceRouting'
          {
               ValueName = 'DisableIPSourceRouting'
               ValueData = 2
@@ -608,7 +615,7 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Key = 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\DisableIPSourceRouting'
+         RegistryPolicyFile 'DisableIPSourceRouting'
          {
               ValueName = 'DisableIPSourceRouting'
               ValueData = 2
@@ -1401,9 +1408,10 @@ Configuration 'MSTF_SecurityBaseline_W2K16_Domain_Contoller'
               Network_security_Force_logoff_when_logon_hours_expire = 'Enabled'
          }
 
-         RefreshRegistryPolicy 'ActivateClientSideExtension'
-         {
-             IsSingleInstance = 'Yes'
-         }
+           # Refresh registry policy to apply changes
+           RefreshRegistryPolicy 'ActivateClientSideExtension'
+           {
+                IsSingleInstance = 'Yes'
+           }
      }
 }

@@ -8,72 +8,80 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_Defender'
 
 	Node 'MSTF_SecurityBaseline_W10_1607_Defender'
 	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\DisableAntiSpyware'
-         {
-              ValueName = 'DisableAntiSpyware'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender'
-         }
+          # Disable Windows Defender AntiSpyware
+          RegistryPolicyFile 'DisableAntiSpyware'
+          {
+               ValueName = 'DisableAntiSpyware'
+               ValueData = 0
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection\DisableBehaviorMonitoring'
-         {
-              ValueName = 'DisableBehaviorMonitoring'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection'
-         }
+          # Enable Real-Time Protection Behavior Monitoring
+          RegistryPolicyFile 'DisableBehaviorMonitoring'
+          {
+               ValueName = 'DisableBehaviorMonitoring'
+               ValueData = 0
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Scan\DisableRemovableDriveScanning'
-         {
-              ValueName = 'DisableRemovableDriveScanning'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Scan'
-         }
+          # Enable scanning of removable drives
+          RegistryPolicyFile 'DisableRemovableDriveScanning'
+          {
+               ValueName = 'DisableRemovableDriveScanning'
+               ValueData = 0
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Scan'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Scan\DisableEmailScanning'
-         {
-              ValueName = 'DisableEmailScanning'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Scan'
-         }
+          # Enable email scanning
+          RegistryPolicyFile 'DisableEmailScanning'
+          {
+               ValueName = 'DisableEmailScanning'
+               ValueData = 0
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Scan'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet\LocalSettingOverrideSpynetReporting'
-         {
-              ValueName = 'LocalSettingOverrideSpynetReporting'
-              ValueData = 0
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
-         }
+          # Disable local override for Spynet reporting
+          RegistryPolicyFile 'LocalSettingOverrideSpynetReporting'
+          {
+               ValueName = 'LocalSettingOverrideSpynetReporting'
+               ValueData = 0
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet\SubmitSamplesConsent'
-         {
-              ValueName = 'SubmitSamplesConsent'
-              ValueData = 1
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
-         }
+          # Set Spynet sample submission consent
+          RegistryPolicyFile 'SubmitSamplesConsent'
+          {
+               ValueName = 'SubmitSamplesConsent'
+               ValueData = 1
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
+          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet\SpynetReporting'
-         {
-              ValueName = 'SpynetReporting'
-              ValueData = 2
-              ValueType = 'Dword'
-              TargetType = 'ComputerConfiguration'
-              Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
-         }
+          # Set Spynet reporting level
+          RegistryPolicyFile 'SpynetReporting'
+          {
+               ValueName = 'SpynetReporting'
+               ValueData = 2
+               ValueType = 'Dword'
+               TargetType = 'ComputerConfiguration'
+               Key = 'HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet'
+          }
 
-         RefreshRegistryPolicy 'ActivateClientSideExtension'
-         {
-             IsSingleInstance = 'Yes'
-         }
+          # Refresh registry policy to apply changes
+          RefreshRegistryPolicy 'ActivateClientSideExtension'
+          {
+               IsSingleInstance = 'Yes'
+          }
      }
 }

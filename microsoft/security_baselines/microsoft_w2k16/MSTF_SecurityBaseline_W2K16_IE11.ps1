@@ -8,7 +8,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
 
 	Node 'MSTF_SecurityBaseline_W10_1607_IE11'
 	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext\RunThisTimeEnabled'
+         RegistryPolicyFile 'RunThisTimeEnabled'
          {
               ValueName = 'RunThisTimeEnabled'
               ValueData = 0
@@ -17,7 +17,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext\VersionCheckEnabled'
+         RegistryPolicyFile 'VersionCheckEnabled'
          {
               ValueName = 'VersionCheckEnabled'
               ValueData = 1
@@ -26,7 +26,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Ext'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Download\RunInvalidSignatures'
+         RegistryPolicyFile 'RunInvalidSignatures'
          {
               ValueName = 'RunInvalidSignatures'
               ValueData = 0
@@ -35,7 +35,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Download\CheckExeSignatures'
+         RegistryPolicyFile 'CheckExeSignatures'
          {
               ValueName = 'CheckExeSignatures'
               ValueData = 'yes'
@@ -44,7 +44,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Download'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Feeds\DisableEnclosureDownload'
+         RegistryPolicyFile 'DisableEnclosureDownload'
          {
               ValueName = 'DisableEnclosureDownload'
               ValueData = 1
@@ -53,7 +53,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Feeds'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\Isolation64Bit'
+         RegistryPolicyFile 'Isolation64Bit'
          {
               ValueName = 'Isolation64Bit'
               ValueData = 1
@@ -62,7 +62,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\DisableEPMCompat'
+         RegistryPolicyFile 'DisableEPMCompat'
          {
               ValueName = 'DisableEPMCompat'
               ValueData = 1
@@ -71,7 +71,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\Isolation'
+         RegistryPolicyFile 'Isolation'
          {
               ValueName = 'Isolation'
               ValueData = 'PMEM'
@@ -80,7 +80,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -89,7 +89,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -98,7 +98,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -107,7 +107,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -116,7 +116,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -125,7 +125,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -134,7 +134,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -143,7 +143,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -152,7 +152,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -161,7 +161,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -170,7 +170,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -179,7 +179,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -188,7 +188,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -197,7 +197,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -206,7 +206,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -215,7 +215,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -224,7 +224,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -233,7 +233,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -242,7 +242,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -251,7 +251,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -260,7 +260,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -269,7 +269,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_WINDOW_RESTRICTIONS'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION\(Reserved)'
+         RegistryPolicyFile '(Reserved)'
          {
               ValueName = '(Reserved)'
               ValueData = '1'
@@ -278,7 +278,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION\explorer.exe'
+         RegistryPolicyFile 'explorer.exe'
          {
               ValueName = 'explorer.exe'
               ValueData = '1'
@@ -287,7 +287,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION\iexplore.exe'
+         RegistryPolicyFile 'iexplore.exe'
          {
               ValueName = 'iexplore.exe'
               ValueData = '1'
@@ -296,7 +296,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_ZONE_ELEVATION'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter\PreventOverrideAppRepUnknown'
+         RegistryPolicyFile 'PreventOverrideAppRepUnknown'
          {
               ValueName = 'PreventOverrideAppRepUnknown'
               ValueData = 1
@@ -305,7 +305,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter\PreventOverride'
+         RegistryPolicyFile 'PreventOverride'
          {
               ValueName = 'PreventOverride'
               ValueData = 1
@@ -314,7 +314,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter\EnabledV9'
+         RegistryPolicyFile 'EnabledV9'
          {
               ValueName = 'EnabledV9'
               ValueData = 1
@@ -323,7 +323,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\PhishingFilter'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Restrictions\NoCrashDetection'
+         RegistryPolicyFile 'NoCrashDetection'
          {
               ValueName = 'NoCrashDetection'
               ValueData = 1
@@ -332,7 +332,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Restrictions'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Security\DisableSecuritySettingsCheck'
+         RegistryPolicyFile 'DisableSecuritySettingsCheck'
          {
               ValueName = 'DisableSecuritySettingsCheck'
               ValueData = 0
@@ -341,7 +341,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Security'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Internet Explorer\Security\ActiveX\BlockNonAdminActiveXInstall'
+         RegistryPolicyFile 'BlockNonAdminActiveXInstall'
          {
               ValueName = 'BlockNonAdminActiveXInstall'
               ValueData = 1
@@ -350,7 +350,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Internet Explorer\Security\ActiveX'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\AxInstaller\OnlyUseAXISForActiveXInstall'
+         RegistryPolicyFile 'OnlyUseAXISForActiveXInstall'
          {
               ValueName = 'OnlyUseAXISForActiveXInstall'
               ValueData = 1
@@ -359,7 +359,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\AxInstaller'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Security_zones_map_edit'
+         RegistryPolicyFile 'Security_zones_map_edit'
          {
               ValueName = 'Security_zones_map_edit'
               ValueData = 1
@@ -368,7 +368,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Security_options_edit'
+         RegistryPolicyFile 'Security_options_edit'
          {
               ValueName = 'Security_options_edit'
               ValueData = 1
@@ -377,7 +377,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Security_HKLM_only'
+         RegistryPolicyFile 'Security_HKLM_only'
          {
               ValueName = 'Security_HKLM_only'
               ValueData = 1
@@ -386,7 +386,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\CertificateRevocation'
+         RegistryPolicyFile 'CertificateRevocation'
          {
               ValueName = 'CertificateRevocation'
               ValueData = 1
@@ -395,7 +395,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\PreventIgnoreCertErrors'
+         RegistryPolicyFile 'PreventIgnoreCertErrors'
          {
               ValueName = 'PreventIgnoreCertErrors'
               ValueData = 1
@@ -404,7 +404,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\WarnOnBadCertRecving'
+         RegistryPolicyFile 'WarnOnBadCertRecving'
          {
               ValueName = 'WarnOnBadCertRecving'
               ValueData = 1
@@ -413,7 +413,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\SecureProtocols'
+         RegistryPolicyFile 'SecureProtocols'
          {
               ValueName = 'SecureProtocols'
               ValueData = 2688
@@ -422,7 +422,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\EnableSSL3Fallback'
+         RegistryPolicyFile 'EnableSSL3Fallback'
          {
               ValueName = 'EnableSSL3Fallback'
               ValueData = 0
@@ -431,7 +431,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\0\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -440,7 +440,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\0'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\1\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -449,7 +449,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\1'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\2\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -458,7 +458,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\2'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\3\2301'
+         RegistryPolicyFile '2301'
          {
               ValueName = '2301'
               ValueData = 0
@@ -467,7 +467,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4\2301'
+         RegistryPolicyFile '2301'
          {
               ValueName = '2301'
               ValueData = 0
@@ -476,7 +476,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -485,7 +485,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\UNCAsIntranet'
+         RegistryPolicyFile 'UNCAsIntranet'
          {
               ValueName = 'UNCAsIntranet'
               ValueData = 0
@@ -494,7 +494,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -503,7 +503,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0\270C'
+         RegistryPolicyFile '270C'
          {
               ValueName = '270C'
               ValueData = 0
@@ -512,7 +512,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1\270C'
+         RegistryPolicyFile '270C'
          {
               ValueName = '270C'
               ValueData = 0
@@ -521,7 +521,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1\1201'
+         RegistryPolicyFile '1201'
          {
               ValueName = '1201'
               ValueData = 3
@@ -530,7 +530,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 65536
@@ -539,7 +539,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\1'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 65536
@@ -548,7 +548,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2\270C'
+         RegistryPolicyFile '270C'
          {
               ValueName = '270C'
               ValueData = 0
@@ -557,7 +557,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2\1201'
+         RegistryPolicyFile '1201'
          {
               ValueName = '1201'
               ValueData = 3
@@ -566,7 +566,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2001'
+         RegistryPolicyFile '2001'
          {
               ValueName = '2001'
               ValueData = 3
@@ -575,7 +575,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2102'
+         RegistryPolicyFile '2102'
          {
               ValueName = '2102'
               ValueData = 3
@@ -584,7 +584,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1802'
+         RegistryPolicyFile '1802'
          {
               ValueName = '1802'
               ValueData = 3
@@ -593,7 +593,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\160A'
+         RegistryPolicyFile '160A'
          {
               ValueName = '160A'
               ValueData = 3
@@ -602,7 +602,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1201'
+         RegistryPolicyFile '1201'
          {
               ValueName = '1201'
               ValueData = 3
@@ -611,7 +611,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1406'
+         RegistryPolicyFile '1406'
          {
               ValueName = '1406'
               ValueData = 3
@@ -620,7 +620,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1804'
+         RegistryPolicyFile '1804'
          {
               ValueName = '1804'
               ValueData = 3
@@ -629,7 +629,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2200'
+         RegistryPolicyFile '2200'
          {
               ValueName = '2200'
               ValueData = 3
@@ -638,7 +638,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1209'
+         RegistryPolicyFile '1209'
          {
               ValueName = '1209'
               ValueData = 3
@@ -647,7 +647,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1206'
+         RegistryPolicyFile '1206'
          {
               ValueName = '1206'
               ValueData = 3
@@ -656,7 +656,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1809'
+         RegistryPolicyFile '1809'
          {
               ValueName = '1809'
               ValueData = 0
@@ -665,7 +665,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2500'
+         RegistryPolicyFile '2500'
          {
               ValueName = '2500'
               ValueData = 0
@@ -674,7 +674,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2103'
+         RegistryPolicyFile '2103'
          {
               ValueName = '2103'
               ValueData = 3
@@ -683,7 +683,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1604'
+         RegistryPolicyFile '1604'
          {
               ValueName = '1604'
               ValueData = 3
@@ -692,7 +692,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1606'
+         RegistryPolicyFile '1606'
          {
               ValueName = '1606'
               ValueData = 3
@@ -701,7 +701,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2402'
+         RegistryPolicyFile '2402'
          {
               ValueName = '2402'
               ValueData = 3
@@ -710,7 +710,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2004'
+         RegistryPolicyFile '2004'
          {
               ValueName = '2004'
               ValueData = 3
@@ -719,7 +719,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -728,7 +728,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1001'
+         RegistryPolicyFile '1001'
          {
               ValueName = '1001'
               ValueData = 3
@@ -737,7 +737,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1A00'
+         RegistryPolicyFile '1A00'
          {
               ValueName = '1A00'
               ValueData = 65536
@@ -746,7 +746,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2708'
+         RegistryPolicyFile '2708'
          {
               ValueName = '2708'
               ValueData = 3
@@ -755,7 +755,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1004'
+         RegistryPolicyFile '1004'
          {
               ValueName = '1004'
               ValueData = 3
@@ -764,7 +764,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\120b'
+         RegistryPolicyFile '120b'
          {
               ValueName = '120b'
               ValueData = 3
@@ -773,7 +773,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1407'
+         RegistryPolicyFile '1407'
          {
               ValueName = '1407'
               ValueData = 3
@@ -782,7 +782,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1409'
+         RegistryPolicyFile '1409'
          {
               ValueName = '1409'
               ValueData = 0
@@ -791,7 +791,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\270C'
+         RegistryPolicyFile '270C'
          {
               ValueName = '270C'
               ValueData = 0
@@ -800,7 +800,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1607'
+         RegistryPolicyFile '1607'
          {
               ValueName = '1607'
               ValueData = 3
@@ -809,7 +809,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2709'
+         RegistryPolicyFile '2709'
          {
               ValueName = '2709'
               ValueData = 3
@@ -818,7 +818,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2101'
+         RegistryPolicyFile '2101'
          {
               ValueName = '2101'
               ValueData = 3
@@ -827,7 +827,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\2301'
+         RegistryPolicyFile '2301'
          {
               ValueName = '2301'
               ValueData = 0
@@ -836,7 +836,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\1806'
+         RegistryPolicyFile '1806'
          {
               ValueName = '1806'
               ValueData = 1
@@ -845,7 +845,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3\120c'
+         RegistryPolicyFile '120c'
          {
               ValueName = '120c'
               ValueData = 3
@@ -854,7 +854,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1608'
+         RegistryPolicyFile '1608'
          {
               ValueName = '1608'
               ValueData = 3
@@ -863,7 +863,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1201'
+         RegistryPolicyFile '1201'
          {
               ValueName = '1201'
               ValueData = 3
@@ -872,7 +872,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1001'
+         RegistryPolicyFile '1001'
          {
               ValueName = '1001'
               ValueData = 3
@@ -881,7 +881,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1607'
+         RegistryPolicyFile '1607'
          {
               ValueName = '1607'
               ValueData = 3
@@ -890,7 +890,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\120b'
+         RegistryPolicyFile '120b'
          {
               ValueName = '120b'
               ValueData = 3
@@ -899,7 +899,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1809'
+         RegistryPolicyFile '1809'
          {
               ValueName = '1809'
               ValueData = 0
@@ -908,7 +908,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1004'
+         RegistryPolicyFile '1004'
          {
               ValueName = '1004'
               ValueData = 3
@@ -917,7 +917,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1606'
+         RegistryPolicyFile '1606'
          {
               ValueName = '1606'
               ValueData = 3
@@ -926,7 +926,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1407'
+         RegistryPolicyFile '1407'
          {
               ValueName = '1407'
               ValueData = 3
@@ -935,7 +935,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\160A'
+         RegistryPolicyFile '160A'
          {
               ValueName = '160A'
               ValueData = 3
@@ -944,7 +944,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1406'
+         RegistryPolicyFile '1406'
          {
               ValueName = '1406'
               ValueData = 3
@@ -953,7 +953,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2102'
+         RegistryPolicyFile '2102'
          {
               ValueName = '2102'
               ValueData = 3
@@ -962,7 +962,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2004'
+         RegistryPolicyFile '2004'
          {
               ValueName = '2004'
               ValueData = 3
@@ -971,7 +971,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2200'
+         RegistryPolicyFile '2200'
          {
               ValueName = '2200'
               ValueData = 3
@@ -980,7 +980,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2000'
+         RegistryPolicyFile '2000'
          {
               ValueName = '2000'
               ValueData = 3
@@ -989,7 +989,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1402'
+         RegistryPolicyFile '1402'
          {
               ValueName = '1402'
               ValueData = 3
@@ -998,7 +998,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1803'
+         RegistryPolicyFile '1803'
          {
               ValueName = '1803'
               ValueData = 3
@@ -1007,7 +1007,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2402'
+         RegistryPolicyFile '2402'
          {
               ValueName = '2402'
               ValueData = 3
@@ -1016,7 +1016,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1400'
+         RegistryPolicyFile '1400'
          {
               ValueName = '1400'
               ValueData = 3
@@ -1025,7 +1025,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1A00'
+         RegistryPolicyFile '1A00'
          {
               ValueName = '1A00'
               ValueData = 196608
@@ -1034,7 +1034,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2001'
+         RegistryPolicyFile '2001'
          {
               ValueName = '2001'
               ValueData = 3
@@ -1043,7 +1043,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1604'
+         RegistryPolicyFile '1604'
          {
               ValueName = '1604'
               ValueData = 3
@@ -1052,7 +1052,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2500'
+         RegistryPolicyFile '2500'
          {
               ValueName = '2500'
               ValueData = 0
@@ -1061,7 +1061,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1409'
+         RegistryPolicyFile '1409'
          {
               ValueName = '1409'
               ValueData = 0
@@ -1070,7 +1070,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1C00'
+         RegistryPolicyFile '1C00'
          {
               ValueName = '1C00'
               ValueData = 0
@@ -1079,7 +1079,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1209'
+         RegistryPolicyFile '1209'
          {
               ValueName = '1209'
               ValueData = 3
@@ -1088,7 +1088,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\270C'
+         RegistryPolicyFile '270C'
          {
               ValueName = '270C'
               ValueData = 0
@@ -1097,7 +1097,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1206'
+         RegistryPolicyFile '1206'
          {
               ValueName = '1206'
               ValueData = 3
@@ -1106,7 +1106,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2708'
+         RegistryPolicyFile '2708'
          {
               ValueName = '2708'
               ValueData = 3
@@ -1115,7 +1115,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1802'
+         RegistryPolicyFile '1802'
          {
               ValueName = '1802'
               ValueData = 3
@@ -1124,7 +1124,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2103'
+         RegistryPolicyFile '2103'
          {
               ValueName = '2103'
               ValueData = 3
@@ -1133,7 +1133,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2709'
+         RegistryPolicyFile '2709'
          {
               ValueName = '2709'
               ValueData = 3
@@ -1142,7 +1142,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1405'
+         RegistryPolicyFile '1405'
          {
               ValueName = '1405'
               ValueData = 3
@@ -1151,7 +1151,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2101'
+         RegistryPolicyFile '2101'
          {
               ValueName = '2101'
               ValueData = 3
@@ -1160,7 +1160,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\2301'
+         RegistryPolicyFile '2301'
          {
               ValueName = '2301'
               ValueData = 0
@@ -1169,7 +1169,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1200'
+         RegistryPolicyFile '1200'
          {
               ValueName = '1200'
               ValueData = 3
@@ -1178,7 +1178,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1804'
+         RegistryPolicyFile '1804'
          {
               ValueName = '1804'
               ValueData = 3
@@ -1187,7 +1187,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\1806'
+         RegistryPolicyFile '1806'
          {
               ValueName = '1806'
               ValueData = 3
@@ -1196,7 +1196,7 @@ Configuration 'MSTF_SecurityBaseline_W10_1607_IE11'
               Key = 'HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4\120c'
+         RegistryPolicyFile '120c'
          {
               ValueName = '120c'
               ValueData = 3

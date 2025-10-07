@@ -1,14 +1,15 @@
 ﻿
 Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
 {
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
-	Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
-	Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
+     Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+     Import-DSCResource -ModuleName 'GPRegistryPolicyDsc' -ModuleVersion '1.2.0'
+     Import-DSCResource -ModuleName 'AuditPolicyDSC' -ModuleVersion '1.4.0.0'
+     Import-DSCResource -ModuleName 'SecurityPolicyDSC' -ModuleVersion '2.10.0.0'
 
-	Node 'MSTF_SecurityBaseline_W11_Credential_Guard'
-	{
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity'
+     Node 'MSTF_SecurityBaseline_W11_Credential_Guard'
+     {
+         # Enables Virtualization-Based Security (VBS) for Credential Guard
+         RegistryPolicyFile 'EnableVirtualizationBasedSecurity'
          {
               ValueName = 'EnableVirtualizationBasedSecurity'
               ValueData = 1
@@ -17,7 +18,8 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\RequirePlatformSecurityFeatures'
+         # Requires platform security features (such as TPM, Secure Boot)
+         RegistryPolicyFile 'RequirePlatformSecurityFeatures'
          {
               ValueName = 'RequirePlatformSecurityFeatures'
               ValueData = 1
@@ -26,7 +28,8 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\HypervisorEnforcedCodeIntegrity'
+         # Enables Hypervisor Enforced Code Integrity (HVCI)
+         RegistryPolicyFile 'HypervisorEnforcedCodeIntegrity'
          {
               ValueName = 'HypervisorEnforcedCodeIntegrity'
               ValueData = 1
@@ -35,7 +38,8 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\HVCIMATRequired'
+         # Requires HVCI memory access protection
+         RegistryPolicyFile 'HVCIMATRequired'
          {
               ValueName = 'HVCIMATRequired'
               ValueData = 1
@@ -44,7 +48,8 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\LsaCfgFlags'
+         # Enables Credential Guard (LSA protection)
+         RegistryPolicyFile 'LsaCfgFlags'
          {
               ValueName = 'LsaCfgFlags'
               ValueData = 1
@@ -53,7 +58,8 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
               Key = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard'
          }
 
-         RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\ConfigureSystemGuardLaunch'
+         # Enables System Guard Secure Launch
+         RegistryPolicyFile 'ConfigureSystemGuardLaunch'
          {
               ValueName = 'ConfigureSystemGuardLaunch'
               ValueData = 1
@@ -66,5 +72,5 @@ Configuration 'MSTF_SecurityBaseline_W11_Credential_Guard'
          {
              IsSingleInstance = 'Yes'
          }
-     }
+    }
 }
