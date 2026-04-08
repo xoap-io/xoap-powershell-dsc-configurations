@@ -105,7 +105,7 @@ Configuration 'MSTF_SecurityBaseline_W10_Computer'
             ValueName  = 'ScreenSaveActive'
             ValueData  = '1'
             ValueType  = 'String'
-            TargetType = 'ComputerConfiguration'
+            TargetType = 'UserConfiguration'
             Key        = 'HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop'
         }
 
@@ -114,7 +114,7 @@ Configuration 'MSTF_SecurityBaseline_W10_Computer'
             ValueName  = 'ScreenSaverIsSecure'
             ValueData  = '1'
             ValueType  = 'String'
-            TargetType = 'ComputerConfiguration'
+            TargetType = 'UserConfiguration'
             Key        = 'HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop'
         }
 
@@ -123,7 +123,7 @@ Configuration 'MSTF_SecurityBaseline_W10_Computer'
             ValueName  = 'ScreenSaveTimeOut'
             ValueData  = '900'
             ValueType  = 'String'
-            TargetType = 'ComputerConfiguration'
+            TargetType = 'UserConfiguration'
             Key        = 'HKCU:\SOFTWARE\Policies\Microsoft\Windows\Control Panel\Desktop'
         }
 
