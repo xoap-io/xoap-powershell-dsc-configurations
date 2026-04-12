@@ -32,10 +32,34 @@ This repository hosts some of the most common DSC configurations that we use in 
 
 You will find the following DSC configurations in this repository:
 
-- Citrix infrastructure and Citrix optimizer configurations
-- DoD STIG configurations
-- general Windows configurations
-- Microsoft security baseline configurations
+- **Citrix** — Delivery Controller, StoreFront, WEM Agent,
+  UberAgent, Session Recording Agent, and optimizer configs
+  (W2K19, W2K22, W2K25, W11 22H2–24H2)
+- **Microsoft Security Baselines** — Computer, BitLocker,
+  Credential Guard, Defender, Domain Security, and DC policies
+  (W2K19–W2K25, W11 22H2–24H2, Edge, M365 Apps)
+- **CIS Benchmarks** — Level 1 (and Level 2 for W11) for
+  Windows Server 2019, 2022, 2025 and Windows 11 24H2
+- **DoD STIG** — January and August 2023 STIG configurations
+  (Adobe Acrobat, Edge, Office, Windows)
+- **Azure Virtual Desktop (AVD)** — Session host, FSLogix,
+  and VDOT optimizer configurations
+- **Remote Desktop Services (RDS)** — Session host,
+  Connection Broker, and Gateway configurations
+- **Windows LAPS** — Modern LAPS for W11, W2K19,
+  W2K22, and W2K25
+- **Microsoft Defender for Endpoint (MDE)** — Onboarding
+  and Attack Surface Reduction (ASR) rules
+- **Windows Firewall** — Baseline firewall profile and rule
+  configurations for clients and servers
+- **Server Roles** — DNS, IIS, WSUS, Active Directory, NPS,
+  Print Server, Failover Cluster, Azure Arc, Windows Admin Center
+- **Win11 Debloat** — Privacy, AI/Search, Taskbar/UI,
+  Services, System, and per-user HKCU settings
+- **XOAP Role Configurations** — Developer, consultant,
+  kiosk, and manager persona configs
+- **Workspace Templates** — Packaging workstation configs
+  for W11 24H2 and W2K25 (physical and VDI)
 
 ---
 
