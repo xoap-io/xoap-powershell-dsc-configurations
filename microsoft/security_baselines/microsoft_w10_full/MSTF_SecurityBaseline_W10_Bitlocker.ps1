@@ -76,7 +76,7 @@ Configuration 'MSTF_SecurityBaseline_W10_Bitlocker'
             ValueData  = 1
             ValueType  = 'Dword'
             TargetType = 'ComputerConfiguration'
-            Key        = 'HKLM:\System\CurrentControlSet\Policies\Microsoft\FVE'
+            Key        = 'HKLM:\SOFTWARE\Policies\Microsoft\FVE'
         }
 
         RegistryPolicyFile 'DenyDeviceClasses'
