@@ -81,7 +81,7 @@ Configuration 'MSTF_SecurityBaseline_W11_24H2_Computer'
             Key        = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
         }
 
-        # --- 23H2 New: Vulnerable Driver Blocklist ---
+        # --- W11 23H2+: Vulnerable Driver Blocklist ---
         RegistryPolicyFile 'EnableVulnerableDriverBlocklist'
         {
             ValueName  = 'EnableVulnerableDriverProtection'
@@ -91,7 +91,7 @@ Configuration 'MSTF_SecurityBaseline_W11_24H2_Computer'
             Key        = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\DeviceGuard'
         }
 
-        # --- 23H2 New: WDAC App Control policy ---
+        # --- W11 23H2+: WDAC App Control policy ---
         RegistryPolicyFile 'EnableAppControl'
         {
             ValueName  = 'AppPolicyConfiguration'
