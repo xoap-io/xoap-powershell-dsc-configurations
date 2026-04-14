@@ -1,0 +1,162 @@
+---
+# Ansible Playbook: Citrix StoreFront Configuration
+# Converted from PowerShell DSC: Citrix_StoreFront.ps1
+# Description: Configures Windows Server with required features and services for Citrix StoreFront
+
+- name: Configure Citrix StoreFront Server
+  hosts: citrix_storefront
+  gather_facts: yes
+  become: yes
+  vars:
+    # Windows Features required for StoreFront
+    required_windows_features:
+      - Web-Server
+      - Web-WebServer
+      - Web-Default-Doc
+      - Web-Http-Errors
+      - Web-Static-Content
+      - Web-Http-Redirect
+      - Web-Health
+      - Web-Http-Logging
+      - Web-Security
+      - Web-Filtering
+      - Web-Basic-Auth
+      - Web-Windows-Auth
+      - Web-App-Dev
+      - Web-Net-Ext45
+      - Web-AppInit
+      - Web-Asp-Net45
+      - Web-ISAPI-Ext
+      - Web-ISAPI-Filter
+      - Web-Mgmt-Tools
+      - Web-Mgmt-Console
+      - Web-Scripting-Tools
+      - NET-Framework-45-ASPNET
+
+  tasks:
+    - name: Ensure target is Windows
+      ansible.builtin.fail:
+        msg: "This playbook is designed for Windows hosts only"
+      when: ansible_os_family != "Windows"
+
+    - name: Install Windows Features for StoreFront
+      ansible.windows.win_feature:
+        name: "{{ item }}"
+        state: present
+        include_management_tools: yes
+      loop: "{{ required_windows_features }}"
+      register: feature_install_result
+      notify:
+        - Restart server if required
+
+    - name: Display feature installation results
+      ansible.builtin.debug:
+        msg: "Feature {{ item.item }} installation: {{ 'Success' if item.success else 'Failed' }}"
+      loop: "{{ feature_install_result.results }}"
+      when: feature_install_result is defined
+
+    - name: Ensure IIS (World Wide Web Publishing Service) is running
+      ansible.windows.win_service:
+        name: W3SVC
+        state: started
+        start_mode: auto
+      register: iis_service_result
+
+    - name: Ensure Citrix StoreFront service is running
+      ansible.windows.win_service:
+        name: CitrixStoreFront
+        state: started
+        start_mode: auto
+      register: storefront_service_result
+      ignore_errors: yes  # Service may not exist if StoreFront not installed yet
+
+    - name: Display service status
+      ansible.builtin.debug:
+        msg: |
+          IIS Service Status: {{ iis_service_result.state }}
+          StoreFront Service Status: {{ storefront_service_result.state | default('Not Available') }}
+
+    - name: Enable StoreFront logging for troubleshooting
+      ansible.windows.win_regedit:
+        path: HKLM:\SOFTWARE\Citrix\DeliveryServices\Logging
+        name: Enabled
+        data: 1
+        type: dword
+        state: present
+      register: registry_result
+
+    - name: Verify StoreFront logging configuration
+      ansible.builtin.debug:
+        msg: "StoreFront logging registry entry: {{ 'Configured' if registry_result.changed else 'Already present' }}"
+
+    - name: Check if reboot is required after feature installation
+      ansible.windows.win_reboot_pending:
+      register: reboot_pending
+
+    - name: Display reboot status
+      ansible.builtin.debug:
+        msg: "Reboot required: {{ reboot_pending.reboot_pending }}"
+
+  handlers:
+    - name: Restart server if required
+      ansible.windows.win_reboot:
+        reboot_timeout: 600
+        pre_reboot_delay: 60
+        post_reboot_delay: 60
+      when: 
+        - feature_install_result is defined
+        - feature_install_result.results | selectattr('reboot_required', 'equalto', true) | list | length > 0
+
+# Additional playbook for validation and post-configuration
+- name: Validate Citrix StoreFront Configuration
+  hosts: citrix_storefront
+  gather_facts: no
+  tasks:
+    - name: Verify installed Windows features
+      ansible.windows.win_feature:
+        name: "{{ item }}"
+      loop:
+        - Web-Server
+        - Web-Asp-Net45
+        - NET-Framework-45-ASPNET
+      register: feature_verification
+      check_mode: yes
+
+    - name: Verify critical services are running
+      ansible.windows.win_service_info:
+        name: "{{ item }}"
+      loop:
+        - W3SVC
+        - CitrixStoreFront
+      register: service_verification
+      ignore_errors: yes
+
+    - name: Generate configuration report
+      ansible.builtin.debug:
+        msg: |
+          === Citrix StoreFront Configuration Summary ===
+          Hostname: {{ ansible_hostname }}
+          OS: {{ ansible_os_name }}
+          IIS Status: {{ (service_verification.results[0].services[0].state | default('Unknown')) }}
+          StoreFront Status: {{ (service_verification.results[1].services[0].state | default('Service not found')) }}
+          Configuration completed at: {{ ansible_date_time.iso8601 }}
+
+# Inventory example (save as inventory.yml):
+# ---
+# all:
+#   children:
+#     citrix_storefront:
+#       hosts:
+#         storefront-server-01:
+#           ansible_host: 192.168.1.100
+#         storefront-server-02:
+#           ansible_host: 192.168.1.101
+#   vars:
+#     ansible_user: administrator
+#     ansible_password: "{{ vault_windows_password }}"
+#     ansible_connection: winrm
+#     ansible_winrm_transport: basic
+#     ansible_winrm_server_cert_validation: ignore
+
+# Usage:
+# ansible-playbook -i inventory.yml citrix_storefront_playbook.yml --ask-vault-pass

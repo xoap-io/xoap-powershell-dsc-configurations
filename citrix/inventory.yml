@@ -1,0 +1,30 @@
+---
+# Ansible Inventory for Citrix StoreFront Servers
+# Save as: inventory.yml or hosts.yml
+
+all:
+  children:
+    citrix_storefront:
+      hosts:
+        storefront-server-01:
+          ansible_host: 192.168.1.100
+          ansible_user: administrator
+        storefront-server-02:
+          ansible_host: 192.168.1.101
+          ansible_user: administrator
+      vars:
+        # Windows connection settings
+        ansible_connection: winrm
+        ansible_winrm_transport: basic
+        ansible_winrm_server_cert_validation: ignore
+        ansible_port: 5985
+        
+        # Use vault for sensitive data
+        ansible_password: "{{ vault_windows_password }}"
+        
+        # Alternative: Use certificate-based auth
+        # ansible_winrm_cert_pem: /path/to/cert.pem
+        # ansible_winrm_cert_key_pem: /path/to/key.pem
+
+# Group variables can also be defined in group_vars/citrix_storefront.yml
+# Host variables can be defined in host_vars/storefront-server-01.yml

@@ -1,11 +1,11 @@
 ﻿
-Configuration DSCFromGPO
+Configuration 'MSTF_SecurityBaseline_W2K25_2506_Member_Server'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
-	Node localhost
+	Node 'MSTF_SecurityBaseline_W2K25_2506_Member_Server'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDriveTypeAutoRun'
          {
@@ -1579,4 +1579,4 @@ Configuration DSCFromGPO
          }
      }
 }
-DSCFromGPO -OutputPath 'C:\Users\s.sokolic\Output'
+MSTF_SecurityBaseline_W2K25_2506_Member_Server -OutputPath 'C:\DSC\MSTF_SecurityBaseline_W2K25_2506_Member_Server'

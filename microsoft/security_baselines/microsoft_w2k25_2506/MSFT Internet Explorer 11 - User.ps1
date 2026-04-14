@@ -1,11 +1,11 @@
 ﻿
-Configuration DSCFromGPO
+Configuration 'MSTF_SecurityBaseline_W2K25_2506_IE11_User'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
-	Node localhost
+	Node 'MSTF_SecurityBaseline_W2K25_2506_IE11_User'
 	{
          <#RegistryPolicyFile 'Registry(POL): HKCU:\Software\Policies\Microsoft\Internet Explorer\Control Panel\FormSuggest Passwords'
          {
@@ -40,4 +40,4 @@ Configuration DSCFromGPO
          }
      }
 }
-DSCFromGPO -OutputPath 'C:\Users\s.sokolic\Output'
+MSTF_SecurityBaseline_W2K25_2506_IE11_User -OutputPath 'C:\DSC\MSTF_SecurityBaseline_W2K25_2506_IE11_User'

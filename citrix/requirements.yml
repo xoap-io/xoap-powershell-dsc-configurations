@@ -1,0 +1,14 @@
+# Ansible Requirements for Citrix StoreFront Playbook
+# Install with: ansible-galaxy collection install -r requirements.yml
+
+collections:
+  - name: ansible.windows
+    version: ">=1.14.0"
+  - name: community.windows
+    version: ">=1.13.0"
+
+# Optional: Additional collections for extended Windows management
+  - name: chocolatey.chocolatey
+    version: ">=1.5.1"
+  - name: community.general
+    version: ">=6.6.0"

@@ -1,11 +1,11 @@
 ﻿
-Configuration DSCFromGPO
+Configuration 'MSTF_SecurityBaseline_W2K25_2506_Defender_Antivirus'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
-	Node localhost
+	Node 'MSTF_SecurityBaseline_W2K25_2506_Defender_Antivirus'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\Software\Policies\Microsoft\Windows Defender\PUAProtection'
          {
@@ -256,4 +256,4 @@ Configuration DSCFromGPO
          }
      }
 }
-DSCFromGPO -OutputPath 'C:\Users\s.sokolic\Output'
+MSTF_SecurityBaseline_W2K25_2506_Defender_Antivirus -OutputPath 'C:\DSC\MSTF_SecurityBaseline_W2K25_2506_Defender_Antivirus'

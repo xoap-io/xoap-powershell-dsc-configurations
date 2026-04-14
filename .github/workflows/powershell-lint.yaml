@@ -1,0 +1,88 @@
+---
+name: PowerShell Lint
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  psscriptanalyzer:
+    name: PSScriptAnalyzer
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser -ErrorAction Stop
+
+          $excludeDirs = @('demo', 'wip', 'Microsoft_Examples', 'workspace-templates')
+          $files = Get-ChildItem -Path . -Filter '*.ps1' -Recurse |
+            Where-Object {
+              $parts = $_.FullName -split [System.IO.Path]::DirectorySeparatorChar
+              ($parts | Where-Object { $excludeDirs -contains $_ }).Count -eq 0
+            }
+
+          Write-Host "Analysing $($files.Count) files..."
+
+          $results = $files | ForEach-Object {
+            Invoke-ScriptAnalyzer -Path $_.FullName -Settings ./.pssa-settings.psd1 -ErrorAction SilentlyContinue
+          }
+
+          if ($results) {
+            $results | Format-Table -AutoSize
+            Write-Error "PSScriptAnalyzer found $($results.Count) issue(s)."
+            exit 1
+          } else {
+            Write-Host "PSScriptAnalyzer: no issues found."
+          }
+
+  syntax-validation:
+    name: DSC Syntax Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate PowerShell Syntax
+        shell: pwsh
+        run: |
+          $excludeDirs = @('demo', 'wip', 'Microsoft_Examples', 'workspace-templates')
+          $files = Get-ChildItem -Path . -Filter '*.ps1' -Recurse |
+            Where-Object {
+              $parts = $_.FullName -split [System.IO.Path]::DirectorySeparatorChar
+              ($parts | Where-Object { $excludeDirs -contains $_ }).Count -eq 0
+            }
+
+          Write-Host "Validating syntax for $($files.Count) files..."
+
+          $failed = @()
+          foreach ($file in $files) {
+            $errors = $null
+            $null = [System.Management.Automation.Language.Parser]::ParseFile(
+              $file.FullName, [ref]$null, [ref]$errors
+            )
+            if ($errors.Count -gt 0) {
+              $failed += [PSCustomObject]@{
+                File   = $file.FullName
+                Errors = ($errors | ForEach-Object { $_.Message }) -join '; '
+              }
+            }
+          }
+
+          if ($failed.Count -gt 0) {
+            $failed | Format-Table -AutoSize -Wrap
+            Write-Error "Syntax errors found in $($failed.Count) file(s)."
+            exit 1
+          } else {
+            Write-Host "Syntax validation passed for all $($files.Count) files."
+          }

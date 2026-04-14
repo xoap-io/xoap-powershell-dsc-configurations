@@ -1,11 +1,11 @@
 ﻿
-Configuration DSCFromGPO
+Configuration 'MSTF_SecurityBaseline_W2K25_2506_Domain_Controller_Virtualization_Based_Security'
 {
 
 	Import-DSCResource -ModuleName 'GPRegistryPolicyDsc'
 	Import-DSCResource -ModuleName 'AuditPolicyDSC'
 	Import-DSCResource -ModuleName 'SecurityPolicyDSC'
-	Node localhost
+	Node 'MSTF_SecurityBaseline_W2K25_2506_Domain_Controller_Virtualization_Based_Security'
 	{
          RegistryPolicyFile 'Registry(POL): HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\EnableVirtualizationBasedSecurity'
          {
@@ -85,4 +85,4 @@ Configuration DSCFromGPO
          }
      }
 }
-DSCFromGPO -OutputPath 'C:\Users\s.sokolic\Output'
+MSTF_SecurityBaseline_W2K25_2506_Domain_Controller_Virtualization_Based_Security -OutputPath 'C:\DSC\MSTF_SecurityBaseline_W2K25_2506_Domain_Controller_Virtualization_Based_Security'
